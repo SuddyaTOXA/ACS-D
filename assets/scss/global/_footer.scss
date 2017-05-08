@@ -1,0 +1,20 @@
+#footer {
+  position: relative;
+  min-height: 46px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  background-color: $color-bg2;
+}
+  .copyright {
+    font-size: 14px;
+    font-weight: $light;
+    text-align: center;
+    color: #ece5f2;
+    a {
+      color: #ece5f2;
+      //cursor: pointer;
+      //&:hover {
+      //  text-decoration: underline;
+      //}
+    }
+  }

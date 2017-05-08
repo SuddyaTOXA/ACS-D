@@ -1,0 +1,56 @@
+a.btn, .btn {
+  position: relative;
+  display: inline-block;
+  min-width: 210px;
+  margin: 0;
+  padding: 13px 20px 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: $white;
+  background-color: #FFB900;
+  border: 2px solid #FFB900;
+  @include border-radius($radius-small);
+  @include font($bold, 16px, $font-main, 1.25);
+  cursor: pointer;
+  @include transition($transition-link);
+  &:hover {
+    color: #FFB900;
+    background-color: transparent;
+  }
+  &.inverse {
+    color: #FFB900;
+    background-color: transparent;
+    border-color: #FFB900;
+    &:hover {
+      color: #FFFFFF;
+      background-color: #FFB900;
+    }
+  }
+  &.small {
+    min-width: 160px;
+    padding: 9px 20px 7px;
+  }
+  &.big {
+    min-width: 200px;
+    padding: 15px 20px 16px;
+    @include font($bold, 1.25em, $font-main, 1.25);
+  }
+  &.btn-white {
+    color: #5F58C2;
+    background-color: $white;
+    border-color: $white;
+    &:hover {
+      color: $white;
+      background-color: transparent;
+    }
+    &.inverse {
+      color: $white;
+      background-color: transparent;
+      &:hover {
+        color: #5F58C2;
+        background-color: $white;
+      }
+    }
+  }
+}

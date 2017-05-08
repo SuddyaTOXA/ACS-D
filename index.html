@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ACS Digital | Home</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,500,800|Roboto:300,300i,400,500,500i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:300,400,500,800|Roboto:300,300i,400,500,500i,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
     <link href="assets/css/screen.css" rel="stylesheet" type="text/css">
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -54,12 +55,40 @@
             </div>
         </header>
 
-       <section class="section">
-           <div class="container"></div>
+       <section class="section section-banner">
+           <div class="swiper-container">
+               <div class="swiper-wrapper">
+                   <div class="swiper-slide">
+                       <div class="container">
+                           <div class="banner-text-box">
+                               <span class="banner-desc">Our first love is</span>
+                               <h1 class="banner-title">
+                                   Creating
+                                   <span>Awesome</span> Websites
+                                   with a Purpose
+                               </h1>
+                               <a href="#" class="btn big btn-white inverse">Learn more</a>
+                           </div>
+                           <div class="banner-img-box">
+                               <img src="img/mockups.png" alt="Mockup">
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+           </div>
        </section>
 
-        <footer id="footer"></footer>
+        <section class="section-what-we-do">
+            <div class="container"></div>
+        </section>
+
     </div>
+
+    <footer id="footer">
+        <p class="copyright"><a href="#">ASC Digital</a> 2016 © All Rights Reserved</p>
+    </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="assets/js/smooth-scroll.min.js"></script>

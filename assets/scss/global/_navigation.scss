@@ -1,0 +1,144 @@
+/*--------------------------------------NAV-----------------------------------------*/
+.main-nav {
+
+}
+.main-nav > ul {
+  margin: 24px -19px 0;
+  text-align: center;
+  > li {
+    position: relative;
+    display: inline-block;
+    padding: 0 19px;
+    text-align: center;
+    a {
+      position: relative;
+      display: inline-block;
+      font-family: $font-raleway;
+      font-size: $size-nav;
+      letter-spacing: -0.2px;
+      color: $white;
+    }
+  }
+}
+
+.main-nav  a:hover,
+.main-nav .current-menu-item > a {
+  text-decoration: none;
+}
+.main-nav  a:hover:after,
+.main-nav .current-menu-item > a:after {
+  background-color: #F6B83F;
+  .scrolling & {
+    background-color: $black;
+  }
+}
+.main-nav  a:hover:after {
+  opacity: 0.7;
+}
+.mobile-menu {
+  padding-bottom: 5px;
+  > li {
+    position: relative;
+    a {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      text-transform: uppercase;
+      padding: 15px 25px 13px;
+    }
+    a:hover:after,
+    &.current-menu-item > a:after {
+      text-decoration: none;
+    }
+    a:hover:after {
+      opacity: 0.7;
+    }
+  }
+  > .current-menu-item > a,
+  > li > a:hover {
+    text-decoration: none;
+  }
+  .expanded:after {
+    content: "\f107";
+    font-family: FontAwesome;
+    font-size: 16px;
+    line-height: 1;
+    text-indent: 0;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 20px;
+    margin-top: -8px;
+    right: 10px;
+    display: inline-block;
+  }
+  &:hover:after {
+    color: #0097de;
+  }
+  &.open:after {
+    content: "\f106";
+  }
+}
+
+.main-nav .sub-menu {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 25px;
+  left: -25px;
+  min-width: 100%;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  text-align: left;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.main-nav {
+  ul {
+    float: right;
+    > li:hover .sub-menu {
+      opacity: 1;
+      visibility: visible;
+      margin: 0;
+    }
+  }
+  .sub-menu {
+    li {
+      display: block;
+      min-width: 250px;
+    }
+    a {
+      display: inline-block;
+      margin: 5px 20px 5px 25px;
+      text-transform: uppercase;
+    }
+    a:hover,
+    .current-menu-item a {
+      text-decoration: none;
+    }
+  }
+}
+
+.main-nav .sub-menu .sub-menu,
+.mobile-menu .sub-menu .sub-menu {
+  display: none;
+}
+
+.mobile-menu .sub-menu {
+  display: block;
+  padding-left: 20px;
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .sub-menu  {
+    padding-left: 45px;
+  }
+}
