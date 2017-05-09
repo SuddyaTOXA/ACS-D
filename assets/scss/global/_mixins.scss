@@ -40,3 +40,8 @@
   -o-transition: all $duration ease;
   transition: all $duration ease;
 }
+
+//TRANSFORM
+@mixin transform ( $x: -50%, $y: -50% ) {
+  @include css3-prefix('transform', translate($x, $y));
+}

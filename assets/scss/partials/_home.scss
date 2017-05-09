@@ -101,7 +101,6 @@
   }
 }
 .section-what-we-do {
-  padding: 170px 0 100px;
   background: rgba(255,255,255,0.12);
   background: -moz-linear-gradient(left, rgba(255,255,255,0.12) 0%, rgba(250,251,253,0.12) 50%, rgba(250,251,253,1) 50%, rgba(250,251,253,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,0.12)), color-stop(50%, rgba(250,251,253,0.12)), color-stop(50%, rgba(250,251,253,1)), color-stop(100%, rgba(250,251,253,1)));
@@ -112,17 +111,14 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#fafbfd', GradientType=1 );
 }
   .what-we-do-list {
+    display: table;
+    width: 100%;
+    min-height: 630px;
     overflow: hidden;
     > li {
-      position: relative;
-      float: left;
+      display: table-cell;
       width: ($col*6);
-      padding: 1px;
-      &:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
+      vertical-align: middle;
     }
   }
     .what-we-box {
@@ -131,18 +127,45 @@
         * {
           margin-bottom: 26px;
           line-height: 1.65;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
       .section-title {
+        margin-bottom: 10px;
         @include font($ex-bold, 2.875em, $font-raleway, 1.25);
         text-transform: uppercase;
         letter-spacing: -0.5px;
         color: $color-text2;
         .inverse & {
           color: $white;
+          letter-spacing: 0.25px;
         }
       }
+        .line {
+          position: relative;
+          margin-bottom: 32px;
+          &:before,
+          &:after {
+            position: absolute;
+            content: '';
+            bottom: -10px;
+            height: 8px;
+            background-color: $color-text4;
+          }
+          &:before {
+            width: 51px;
+            left: 2px;
+            @include border-radius(2em);
+          }
+          &:after {
+            width: 8px;
+            left: 56px;
+            @include border-radius(50%)
+          }
+        }
 
     .swiper-what-we-do {
       max-width: 440px;
@@ -150,18 +173,18 @@
       text-align: center;
       .swiper-button-prev {
         .fa-chevron-left {
-          color: red;
+          color: rgb(45, 49, 88);
         }
         .fa-angle-left {
-          color: red;
+          color: rgb(45, 49, 88);
         }
       }
       .swiper-button-next {
         .fa-chevron-right {
-          color: red;
+          color: rgb(45, 49, 88);
         }
         .fa-angle-right {
-          color: red;
+          color: rgb(45, 49, 88);
         }
       }
       a.btn, .btn {
@@ -210,4 +233,135 @@
   .content {
     @include font($light, 1.375em, $font-main, 1.45);
   }
+  a.btn, .btn {
+    margin-top: 30px;
+  }
 }
+
+.section-recent-works {
+
+}
+  .recent-works-list {
+    overflow: hidden;
+    > li {
+      overflow: hidden;
+      position: relative;
+      float: left;
+      width: 50%;
+      height: 640px;
+      img {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        width: auto;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        @include transform();
+      }
+      &:nth-child(1) {
+        width: 63.125%;
+      }
+      &:nth-child(4) {
+        float: right;
+        width: 63.125%;
+      }
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(5),
+      &:nth-child(6) {
+          width: 36.875%;
+          height: 320px;
+        .recent-work-overlay {
+          padding: 25px 30px 25px;
+        }
+
+      }
+    }
+    &.items-5 {
+      > li {
+        &:nth-child(4){
+          float: left;
+          width: 36.875%;
+          .recent-work-overlay {
+            padding: 25px 30px 25px;
+          }
+        }
+        &:nth-child(5){
+          width: 63.125%;
+          height: 640px;
+        }
+      }
+    }
+    &.items-4 {
+      > li {
+        &:nth-child(4) {
+          width: 100%;
+        }
+      }
+    }
+    &.items-3 {
+      > li {
+      }
+    }
+    &.items-2 {
+      > li {
+        &:nth-child(1),
+        &:nth-child(2) {
+          height: 640px;
+          width: 50%;
+        }
+      }
+    }
+    &.items-1 {
+      > li {
+        &:nth-child(1) {
+          width: 100%;
+        }
+      }
+    }
+  }
+    .recent-work-overlay {
+      position: absolute;
+      display: table;
+      width: calc(100% + 1px);
+      height: 100%;
+      top: 0;
+      left: -100%;
+      padding: 85px 60px 85px;
+      background-color: rgba(45, 49, 88, 0.9);
+      @include transition($transition-other);
+      .recent-works-list > li:hover & {
+        left: 0;
+      }
+      .content {
+        max-width: 500px;
+      }
+    }
+      .recent-work-decs {
+        display: table-cell;
+        width: 100%;
+        min-height: 50px;
+        vertical-align: bottom;
+        color: $white;
+      }
+        .recent-work-type {
+          max-width: 500px;
+          display: block;
+          margin-bottom: 7px;
+          @include font($normal, 1.25em, $font-raleway, 1.25);
+          color: $color-text4;
+        }
+        .box-title {
+          max-width: 500px;
+          @include font($ex-bold, 2.25em, $font-raleway, 1.15);
+          text-transform: uppercase;
+          color: $white;
+          &.line {
+            margin-bottom: 38px;
+            &:after,
+            &:before {
+              bottom: -14px;
+            }
+          }
+        }
