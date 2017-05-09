@@ -41,9 +41,12 @@
     position: relative;
     a {
       position: relative;
-      display: inline-block;
+      display: block;
       width: 100%;
-      text-transform: uppercase;
+      font-family: $font-raleway;
+      font-size: $size-nav;
+      letter-spacing: -0.2px;
+      color: $white;
       padding: 15px 25px 13px;
     }
     a:hover:after,

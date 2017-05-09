@@ -7,16 +7,28 @@
 }
 
 @media all and (max-width: 1400px) {
+    .header {
+      padding: 12px 0 10px;
+    }
+  .container {
+    padding: 0 15px;
+  }
+    .section-banner .container {
+      padding-top: 100px;
+    }
     .swiper-button-prev {
       left: 10px;
     }
     .swiper-button-next {
       right: 10px;
     }
+
 }
 
 @media all and (max-width: 1280px) {
-
+  .banner-text-box {
+    padding-right: 20px;
+  }
 }
 
 @media all and (max-width: 1199px) {
@@ -32,7 +44,22 @@
 }
 
 @media all and (max-width: 991px) {
-
+  .desktop {
+    display: none !important;
+  }
+  .mobile-menu-wrap,
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .logo {
+    max-width: 140px;
+    padding-top: 7px;
+    padding-bottom: 0;
+  }
+  .banner-text-box {
+    width: 100%;
+    padding-right: 0;
+  }
 }
 
 @media all and (max-width: 960px) {

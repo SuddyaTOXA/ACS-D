@@ -32,26 +32,26 @@ $(function(){
     // }
 
 	$(document).ready(function() {
-        // for burger menu
-        // $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function () {
-        //     $('.mobile-menu-toggle').toggleClass('active');
-        //     $('.mobile-menu-wrap').toggleClass('showing');
-        //     $(document.body).toggleClass('overflow');
-        // });
+        //for burger menu
+        $('.mobile-menu-toggle, .mobile-menu-overlay').on('click', function () {
+            $('.mobile-menu-toggle').toggleClass('active');
+            $('.mobile-menu-wrap').toggleClass('showing');
+            $(document.body).toggleClass('overflow');
+        });
 
-            var swiper = new Swiper('.swiper-banner', {
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                loop: true,
-                autoHeight: true
-            });
+		var swiper = new Swiper('.swiper-banner', {
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			loop: true,
+			autoHeight: true
+		});
 
-            var swiper = new Swiper('.swiper-what-we-do', {
-                nextButton: '.swiper-button-next',
-                prevButton: '.swiper-button-prev',
-                loop: true,
-                autoHeight: true
-            });
+		var swiper = new Swiper('.swiper-what-we-do', {
+			nextButton: '.swiper-button-next',
+			prevButton: '.swiper-button-prev',
+			loop: true,
+			autoHeight: true
+		});
 
     });
 });
