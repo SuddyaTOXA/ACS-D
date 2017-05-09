@@ -70,7 +70,7 @@ img {
   .container {
     display: table;
     width: 100%;
-    height: 494px;
+    height: 442px;
     padding-top: 50px;
     padding-bottom: 50px;
   }
@@ -134,12 +134,16 @@ img {
       clear: both;
     }
   }
+  .inverse & {
+    color: $white;
+  }
 }
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
 /*----------------------------------------------------------------------------------*/
 .wrapper {
+  overflow: hidden;
   position: relative;
   min-height: 100%;
   margin-bottom: -46px;

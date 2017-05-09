@@ -11,7 +11,7 @@ a.btn, .btn {
   background-color: #FFB900;
   border: 2px solid #FFB900;
   @include border-radius($radius-small);
-  @include font($bold, 16px, $font-main, 1.25);
+  @include font($bold, 16px, $font-raleway, 1.25);
   cursor: pointer;
   @include transition($transition-link);
   &:hover {
@@ -34,7 +34,7 @@ a.btn, .btn {
   &.big {
     min-width: 200px;
     padding: 15px 20px 16px;
-    @include font($bold, 1.25em, $font-main, 1.25);
+    @include font($bold, 1.25em, $font-raleway, 1.25);
   }
   &.btn-white {
     color: #5F58C2;

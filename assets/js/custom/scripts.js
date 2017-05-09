@@ -38,5 +38,21 @@ $(function(){
         //     $('.mobile-menu-wrap').toggleClass('showing');
         //     $(document.body).toggleClass('overflow');
         // });
+		if ($('div').hasClass('.swiper-container')) {
+            var swiper = new Swiper('.swiper-banner', {
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                loop: true,
+                autoHeight: true
+            });
+        }
+        if ($('div').hasClass('.swiper-container')) {
+            var swiper = new Swiper('.swiper-what-we-do', {
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                loop: true,
+                autoHeight: true
+            });
+        }
     });
 });
