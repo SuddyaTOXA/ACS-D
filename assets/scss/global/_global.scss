@@ -40,9 +40,7 @@ a:hover                        { text-decoration:underline; }
 .clear                         { clear:both; }
 
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include css3-prefix('box-sizing', 'border-box')
 }
 em, i {
   font-style: italic;
@@ -54,11 +52,7 @@ a, .btn {
   @include transition($transition-link);
 }
 img {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -o-user-select: none;
-  -khtml-user-select: none;
-  user-select: none;
+  @include css3-prefix('user-select', 'none');
 }
 .container {
   max-width: 1220px;

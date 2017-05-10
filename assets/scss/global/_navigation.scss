@@ -84,15 +84,8 @@
   opacity: 0;
   visibility: hidden;
   text-align: left;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  background-image: -moz-linear-gradient( 145deg, rgb(7,208,206) 0%, rgb(77,111,196) 100%);
-  background-image: -webkit-linear-gradient( 145deg, rgb(7,208,206) 0%, rgb(77,111,196) 100%);
-  background-image: -ms-linear-gradient( 145deg, rgb(7,208,206) 0%, rgb(77,111,196) 100%);
-  background-image: linear-gradient( -55deg, rgb(7,208,206) 0%, rgb(77,111,196) 100%);
+  @include css3-prefix('transition', 'all .2s ease-in-out');
+  @include bg_gradient();
 }
 
 .main-nav {
