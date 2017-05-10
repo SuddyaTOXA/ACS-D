@@ -537,10 +537,10 @@ a.btn, .btn {
   display: none; }
 
 .mobile-menu .sub-menu {
-  display: block;
-  padding-left: 20px; }
+  display: block; }
   .mobile-menu .sub-menu a {
-    font-size: 14px; }
+    font-size: 14px;
+    padding-left: 40px; }
     .mobile-menu .sub-menu a:hover {
       text-decoration: none; }
   .mobile-menu .sub-menu .sub-menu {
@@ -1066,7 +1066,8 @@ a.btn, .btn {
     font-size: 1.1em; } }
 @media all and (max-width: 860px) {
   .section-what-we-do {
-    background: #ffffff; }
+    background: #ffffff;
+    padding-top: 80px; }
 
   .what-we-do-list {
     display: block; }
