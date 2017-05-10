@@ -111,19 +111,6 @@
   }
   .banner-img-box {
     margin-top: -40px;
-    //position: absolute;
-    //z-index: 10;
-    //left: 0;
-    //width: 100%;
-    //@include transform(0 , 40px);
-    //img {
-    //  left: calc(50% - 10px);
-    //  max-height: calc(100vh - 100px);
-    //  max-width: 100%;
-    //  bottom: 0;
-    //  right: 30px;
-    //}
-
     img {
       position: relative;
       width: auto;
@@ -291,7 +278,11 @@
 }
 
 @media all and (max-width: 600px) {
-
+  .banner-img-box {
+    img {
+      max-width: 100%;
+    }
+  }
 }
 
 @media all and (max-width: 560px) {
