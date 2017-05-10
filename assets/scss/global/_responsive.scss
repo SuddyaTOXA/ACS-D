@@ -7,22 +7,26 @@
 }
 
 @media all and (max-width: 1400px) {
-    .header {
-      padding: 12px 0 10px;
-    }
-  .container {
-    padding: 0 15px;
+  //.header {
+  //  padding: 12px 0 10px;
+  //}
+  .section-banner .container {
+    padding: 100px 30px 40px;
   }
-    .section-banner .container {
-      padding: 100px 25px 40px;
-    }
+  .swiper-banner {
     .swiper-button-prev {
-      left: 5px;
+      width: 80px;
+      .fa-chevron-left {
+        left: 5px;
+      }
     }
     .swiper-button-next {
-      right: 5px;
+      width: 80px;
+      .fa-chevron-right {
+        right: 5px;
+      }
     }
-
+  }
 }
 
 @media all and (max-width: 1280px) {
@@ -32,7 +36,14 @@
 }
 
 @media all and (max-width: 1199px) {
-
+  .swiper-banner {
+    .swiper-button-prev {
+      width: 30px;
+    }
+    .swiper-button-next {
+      width: 30px;
+    }
+  }
 }
 
 @media all and (max-width: 1080px) {
@@ -44,6 +55,9 @@
 }
 
 @media all and (max-width: 991px) {
+  .header {
+    padding: 12px 0 10px;
+  }
   .desktop {
     display: none !important;
   }
@@ -56,18 +70,38 @@
     padding-top: 7px;
     padding-bottom: 0;
   }
+  .banner-desc {
+    margin-bottom: 6px;
+    line-height: 1;
+  }
+  .banner-title {
+    line-height: 1;
+  }
   .banner-text-box {
     width: 100%;
     padding-right: 0;
   }
-  .section-banner .container {
-    padding: 65px 25px 40px;
+  .section-banner {
+    .container {
+      padding: 65px 30px 40px;
+      a.btn, .btn {
+        margin-top: 16px;
+      }
+    }
   }
-  .swiper-button-prev {
-    left: 0;
-  }
-  .swiper-button-next {
-    right: 0;
+  .swiper-banner {
+    .swiper-button-prev {
+      width: 30px;
+      .fa-chevron-left {
+        left: 0;
+      }
+    }
+    .swiper-button-next {
+      width: 30px;
+      .fa-chevron-right {
+        right: 0;
+      }
+    }
   }
   .banner-img-box {
     position: absolute;
@@ -76,12 +110,15 @@
     width: 100%;
     @include transform(0 , 40px);
     img {
-      max-width: 90%;
+      max-width: 80%;
       bottom: 0;
-      right: 10px;
+      right: 30px;
     }
   }
   .banner-text-box {
+    padding-top: 40px;
+    padding-bottom: 100px;
+    vertical-align: top;
     text-shadow: 3px 3px 2px rgba(45, 49, 88, 0.7);
   }
   .what-we-box {
@@ -159,7 +196,20 @@
 }
 
 @media all and (max-width: 860px) {
-
+  .section-what-we-do {
+    background: $white;
+  }
+  .what-we-do-list {
+    display: block;
+    > li {
+      display: block;
+      width: 100%;
+      margin-bottom: 30px;
+      &:last-child {
+        background-color: $white;
+      }
+    }
+  }
 }
 
 @media all and (max-width: 790px) {
@@ -185,20 +235,6 @@
 
 }
 @media all and (max-width: 736px) {
-  .section-what-we-do {
-    background: $white;
-  }
-  .what-we-do-list {
-    display: block;
-    > li {
-      display: block;
-      width: 100%;
-      margin-bottom: 30px;
-      &:last-child {
-        background-color: $white;
-      }
-    }
-  }
   .recent-works-list,
   .recent-works-list .items-6{
     > li {
@@ -216,16 +252,19 @@
 }
 
 @media all and (max-width: 640px) {
-.box-title {
-  font-size: 2em;
-  &.line {
-    margin-bottom: 30px;
+  .box-title {
+    font-size: 2em;
+    &.line {
+      margin-bottom: 30px;
+    }
   }
-}
-.banner-title,
-.section-title {
-  font-size: 2.2em;
-}
+  .banner-title,
+  .section-title {
+    font-size: 2.2em;
+  }
+  .banner-desc {
+    font-size: 1.6em;
+  }
 }
 
 @media all and (max-width: 600px) {

@@ -16,6 +16,8 @@
 }
   .banner-img-box,
   .banner-text-box {
+    position: relative;
+    z-index: 20;
     display: table-cell;
     min-height: 100px;
     padding: 1px 1px;
@@ -83,7 +85,6 @@
   }
 }
 .swiper-button-prev {
-  left: 60px;
   .fa-chevron-left {
     font-size: 32px;
     color: $white;
@@ -94,7 +95,6 @@
   }
 }
 .swiper-button-next {
-  right: 60px;
   .fa-chevron-right {
     font-size: 32px;
     color: $white;
@@ -102,6 +102,35 @@
   .fa-angle-right {
     font-size: 52px;
     color: $white;
+  }
+}
+
+.swiper-banner {
+  .swiper-button-prev {
+    width: 120px;
+    height: 100%;
+    top: 0;
+    margin-top: auto;
+    left: 0;
+    .fa-chevron-left {
+      position: absolute;
+      top: 50%;
+      left: 60px;
+      margin-top: -16px;
+    }
+  }
+  .swiper-button-next {
+    width: 120px;
+    height: 100%;
+    top: 0;
+    margin-top: auto;
+    right: 0;
+    .fa-chevron-right {
+      position: absolute;
+      top: 50%;
+      right: 60px;
+      margin-top: -16px;
+    }
   }
 }
 .section-what-we-do {
