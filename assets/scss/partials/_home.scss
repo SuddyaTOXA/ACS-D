@@ -13,6 +13,9 @@
       margin-top: 32px;
     }
   }
+  .swiper-wrapper {
+    height: auto !important;
+  }
 }
   .banner-img-box,
   .banner-text-box {
@@ -60,7 +63,7 @@
       max-width: calc(100% + 35px);
       height: auto;
       bottom: -153px;
-      left: calc(50% + 33px);
+      left: calc(50% + 65px);
       @include transform(-50%, 0);
     }
   }

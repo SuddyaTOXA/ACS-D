@@ -574,6 +574,8 @@ a.btn, .btn {
     padding: 160px 25px 40px; }
     .section-banner .container a.btn, .section-banner .container .btn {
       margin-top: 32px; }
+  .section-banner .swiper-wrapper {
+    height: auto !important; }
 
 .banner-img-box,
 .banner-text-box {
@@ -622,7 +624,7 @@ a.btn, .btn {
     max-width: calc(100% + 35px);
     height: auto;
     bottom: -153px;
-    left: calc(50% + 33px);
+    left: calc(50% + 65px);
     -webkit-transform: translate(-50%, 0);
     -khtml-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
@@ -1006,7 +1008,7 @@ a.btn, .btn {
     .banner-img-box img {
       position: relative;
       width: auto;
-      max-width: 100%;
+      max-width: 570px;
       bottom: -80px;
       left: 50%; }
 
