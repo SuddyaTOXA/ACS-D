@@ -39,12 +39,13 @@ $(function(){
             $(document.body).toggleClass('overflow');
         });
 
-		var swiper = new Swiper('.swiper-banner', {
-			nextButton: '.swiper-button-next',
-			prevButton: '.swiper-button-prev',
-			loop: true,
-			autoHeight: true
-		});
+        var swiper = new Swiper('.swiper-banner', {
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            loop: true,
+            autoHeight: true
+        });
+
 
 		var swiper = new Swiper('.swiper-what-we-do', {
 			nextButton: '.swiper-button-next',
