@@ -567,7 +567,8 @@ a.btn, .btn {
 .section-banner {
   background-image: -moz-linear-gradient(145deg, #07d0ce 0%, #8226bc 100%);
   background-image: -webkit-linear-gradient(145deg, #07d0ce 0%, #8226bc 100%);
-  background-image: -ms-linear-gradient(145deg, #07d0ce 0%, #8226bc 100%); }
+  background-image: -ms-linear-gradient(145deg, #07d0ce 0%, #8226bc 100%);
+  background-image: linear-gradient(-55deg, #07d0ce 0%, #8226bc 100%); }
   .section-banner .container {
     display: table;
     width: 100%;
