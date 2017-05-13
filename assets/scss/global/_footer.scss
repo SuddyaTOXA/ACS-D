@@ -12,9 +12,9 @@
     color: #ece5f2;
     a {
       color: #ece5f2;
-      //cursor: pointer;
-      //&:hover {
-      //  text-decoration: underline;
-      //}
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }

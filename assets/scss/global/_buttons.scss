@@ -53,4 +53,21 @@ a.btn, .btn {
       }
     }
   }
+  &.btn-orange {
+    color: $white;
+    background-color: #FF8400;
+    border-color: #FF8400;
+    &:hover {
+      color: #FF8400;
+      background-color: transparent;
+    }
+    &.inverse {
+      color: #FF8400;
+      background-color: transparent;
+      &:hover {
+        color: $white;
+        background-color: #FF8400;
+      }
+    }
+  }
 }

@@ -3,24 +3,29 @@ $(function(){
 	$(function() {
 	   var header = $('#header');
 	   setTimeout(function(){
-	   	header.addClass('show');
+		   if ($('div').hasClass('header-with-bg')) {
+			   header.addClass('show-bg');
+		   }
+			header.addClass('show');
 	   },800);
 	});
 
 	//header background on scroll
-	var header = $('#header');
-	$(window).on('scroll', function() {
-	   var st2 = $(this).scrollTop();
-		   		
-	   if (st2 > 0) {
-	      // console.log(st2);
-	      header.addClass('scrolling');
-	      
-	   } else {
-	   	header.removeClass('scrolling');
-	   }
+    $(function() {
+        var header = $('#header');
+        $(window).on('scroll', function () {
+            var st2 = $(this).scrollTop();
 
-	});
+            if (st2 > 0) {
+                // console.log(st2);
+                header.addClass('scrolling');
+
+            } else {
+                header.removeClass('scrolling');
+            }
+        });
+    });
+
     // for smooth scroll
     // if ( $('a').is('.smooth-scroll') ) {
     //     smoothScroll.init({
@@ -37,6 +42,15 @@ $(function(){
             $('.mobile-menu-toggle').toggleClass('active');
             $('.mobile-menu-wrap').toggleClass('showing');
             $(document.body).toggleClass('overflow');
+        });
+
+        // for header-fixed padding
+        $(window).on('load resize', function() {
+            if ($('div').hasClass('header-with-bg')) {
+               var headerHeight = $('#header').outerHeight();
+
+                $('.wrapper').css('padding-top', headerHeight + 72);
+            }
         });
 
         var swiper = new Swiper('.swiper-banner', {

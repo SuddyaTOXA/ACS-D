@@ -51,10 +51,10 @@ table {
   border-spacing: 0; }
 
 a:link, a:visited {
-  text-decoration: none; }
+  text-decoration: underline; }
 
 a:hover {
-  text-decoration: underline; }
+  text-decoration: none; }
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------DEFAULT CLASSES------------------------------*/
@@ -158,10 +158,7 @@ img {
   .content *:last-child {
     margin-bottom: 0; }
 .content a {
-  color: #ffcc00; }
-  .content a:hover {
-    opacity: 0.7;
-    text-decoration: none; }
+  color: #535674; }
 .content ul > li {
   list-style-type: disc; }
 .content ol > li {
@@ -262,6 +259,19 @@ a.btn, .btn {
       a.btn.btn-white.inverse:hover, .btn.btn-white.inverse:hover {
         color: #5F58C2;
         background-color: #ffffff; }
+  a.btn.btn-orange, .btn.btn-orange {
+    color: #ffffff;
+    background-color: #FF8400;
+    border-color: #FF8400; }
+    a.btn.btn-orange:hover, .btn.btn-orange:hover {
+      color: #FF8400;
+      background-color: transparent; }
+    a.btn.btn-orange.inverse, .btn.btn-orange.inverse {
+      color: #FF8400;
+      background-color: transparent; }
+      a.btn.btn-orange.inverse:hover, .btn.btn-orange.inverse:hover {
+        color: #ffffff;
+        background-color: #FF8400; }
 
 .header {
   position: fixed;
@@ -301,6 +311,11 @@ a.btn, .btn {
     box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1); }
     .header.scrolling:after {
       background-color: rgba(0, 0, 0, 0.1); }
+  .header.show-bg {
+    background-image: -moz-linear-gradient(145deg, #07d0ce 0%, #4d6fc4 100%);
+    background-image: -webkit-linear-gradient(145deg, #07d0ce 0%, #4d6fc4 100%);
+    background-image: -ms-linear-gradient(145deg, #07d0ce 0%, #4d6fc4 100%);
+    background-image: linear-gradient(-55deg, #07d0ce 0%, #4d6fc4 100%); }
 
 .logo {
   overflow: hidden;
@@ -472,7 +487,8 @@ a.btn, .btn {
       font-family: "Raleway", Arial, sans-serif;
       font-size: 16px;
       letter-spacing: -0.2px;
-      color: #ffffff; }
+      color: #ffffff;
+      text-decoration: none; }
 
 .main-nav a:hover,
 .main-nav .current-menu-item > a {
@@ -494,7 +510,8 @@ a.btn, .btn {
       font-size: 16px;
       letter-spacing: -0.2px;
       color: #ffffff;
-      padding: 15px 25px 13px; }
+      padding: 15px 25px 13px;
+      text-decoration: none; }
   .mobile-menu > .current-menu-item > a,
   .mobile-menu > li > a:hover {
     color: #ffcc00;
@@ -551,7 +568,8 @@ a.btn, .btn {
   min-width: 250px; }
 .main-nav .sub-menu a {
   display: inline-block;
-  margin: 5px 20px 5px 25px; }
+  margin: 5px 20px 5px 25px;
+  text-decoration: none; }
 .main-nav .sub-menu a:hover,
 .main-nav .sub-menu .current-menu-item a {
   text-decoration: none; }
@@ -564,7 +582,8 @@ a.btn, .btn {
   display: block; }
   .mobile-menu .sub-menu a {
     font-size: 14px;
-    padding-left: 40px; }
+    padding-left: 40px;
+    text-decoration: none; }
     .mobile-menu .sub-menu a:hover {
       text-decoration: none; }
   .mobile-menu .sub-menu .sub-menu {
@@ -583,7 +602,10 @@ a.btn, .btn {
   text-align: center;
   color: #ece5f2; }
   .copyright a {
-    color: #ece5f2; }
+    color: #ece5f2;
+    text-decoration: none; }
+    .copyright a:hover {
+      text-decoration: underline; }
 
 /* styles used throughout site */
 .section-banner {
@@ -964,6 +986,168 @@ a.btn, .btn {
     margin-bottom: 38px; }
     .box-title.line:after, .box-title.line:before {
       bottom: -14px; }
+
+#sidebar {
+  float: right;
+  width: 310px;
+  margin-top: 88px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-bottom: 6px;
+  border-left: 1px solid #E5E6EB; }
+
+.sidebar-box {
+  margin-top: -3px; }
+
+.widget-box {
+  margin-bottom: 48px; }
+
+.widget-title {
+  margin-bottom: 25px;
+  font: 700 1.625em "Raleway", Arial, sans-serif;
+  line-height: 1.25;
+  color: #2d3158;
+  letter-spacing: -0.2px; }
+
+.more-services-list > li {
+  margin-bottom: 26px; }
+  .more-services-list > li a {
+    color: #2d3158;
+    text-decoration: none; }
+    .more-services-list > li a:hover {
+      color: #ffcc00; }
+  .more-services-list > li:last-child {
+    margin-bottom: 0; }
+
+.recent-articles-list {
+  padding-top: 8px; }
+  .recent-articles-list > li {
+    margin-bottom: 35px; }
+    .recent-articles-list > li:last-child {
+      margin-bottom: 0; }
+    .recent-articles-list > li a {
+      text-decoration: none; }
+      .recent-articles-list > li a:hover .recent-article-title {
+        color: #ffcc00; }
+
+.recent-article-box .content {
+  padding-right: 20px;
+  opacity: 0.5; }
+  .recent-article-box .content * {
+    font-size: 14px;
+    color: #2d3158; }
+
+.recent-article-img-wrap {
+  max-width: 206px;
+  width: 100%;
+  margin-bottom: 10px; }
+  .recent-article-img-wrap img {
+    max-width: 100%;
+    height: auto; }
+
+.recent-article-title {
+  margin-bottom: 9px;
+  font: 700 1em "Roboto", Arial, sans-serif;
+  line-height: 1.25;
+  color: #2d3158;
+  -webkit-transition: 0.2s;
+  -khtml-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
+.content-box-wrap {
+  max-width: calc(100% - 310px);
+  padding-right: 30px; }
+
+.news-list > li {
+  margin-bottom: 33px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #E5E6EB; }
+  .news-list > li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none; }
+
+.news-box a.btn,
+.news-box .btn {
+  margin-top: 24px; }
+.news-box > a {
+  text-decoration: none; }
+  .news-box > a:hover .news-title {
+    color: #ffcc00; }
+
+.news-title {
+  margin-bottom: 6px;
+  font: 700 1.875em "Raleway", Arial, sans-serif;
+  line-height: 1.25;
+  color: #2d3158;
+  letter-spacing: -0.2px;
+  -webkit-transition: 0.2s;
+  -khtml-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
+
+.news-date {
+  display: block;
+  margin-bottom: 26px;
+  font-size: 14px;
+  color: #2d3158;
+  opacity: 0.5; }
+
+.news-img-wrap {
+  overflow: hidden;
+  -webkit-border-radius: 6px;
+  -khtml-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  margin-bottom: 19px; }
+  .news-img-wrap img {
+    max-width: 100%;
+    height: auto; }
+
+.news-author {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 500;
+  color: #2d3158;
+  letter-spacing: 0.3px;
+  opacity: 0.5; }
+  .news-author a {
+    color: #2d3158;
+    text-decoration: none; }
+    .news-author a:hover {
+      text-decoration: underline; }
+
+.wp-pagenavi {
+  float: right;
+  margin: 4px auto 0;
+  padding-right: 80px;
+  color: #40464b;
+  font-size: 1.125em;
+  font-weight: 400; }
+  .wp-pagenavi .pages {
+    display: none; }
+  .wp-pagenavi .curren {
+    color: #000; }
+  .wp-pagenavi > * {
+    padding: 0 10px; }
+    .wp-pagenavi > *.extend {
+      padding: 0 7px; }
+  .wp-pagenavi a {
+    color: #40464b; }
+    .wp-pagenavi a:hover {
+      color: #fb7e22;
+      text-decoration: none; }
+    .wp-pagenavi a .fa-long-arrow-left,
+    .wp-pagenavi a .fa-long-arrow-right {
+      position: relative;
+      top: 2px; }
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1400px) {
