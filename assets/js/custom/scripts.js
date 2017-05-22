@@ -47,9 +47,13 @@ $(function(){
         // for header-fixed padding
         $(window).on('load resize', function() {
             if ($('div').hasClass('header-with-bg')) {
-               var headerHeight = $('#header').outerHeight();
-
-                $('.wrapper').css('padding-top', headerHeight + 72);
+               var headerHeight = $('#header').outerHeight(),
+                   widthWin = $(window).width();
+               if (widthWin > 991) {
+                   $('.wrapper').css('padding-top', headerHeight + 72);
+               } else {
+                   $('.wrapper').css('padding-top', headerHeight + 22);
+               }
             }
         });
 

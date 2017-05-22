@@ -78,10 +78,13 @@
 
 
 .content-box-wrap {
+  overflow: hidden;
   max-width: calc(100% - 310px);
   padding-right: 30px;
+  padding-bottom: 90px;
 }
   .news-list {
+    margin-bottom: 60px;
     > li {
       margin-bottom: 33px;
       padding-bottom: 40px;
@@ -146,35 +149,63 @@
         }
       }
     }
+.pagenavi-block {
+  > span {
+    display: inline-block;
+    padding-top: 2px;
+    padding-right: 4px;
+    margin-bottom: 10px;
+    color: $color-text2;
+    vertical-align: middle;
+  }
+}
 .wp-pagenavi {
-  float: right;
-  margin: 4px auto 0;
-  padding-right: 80px;
-  color: #40464b;
-  font-size: 1.125em;
+  display: inline-block;
+  color: $color-text2;
+  font-size: 1em;
   font-weight: 400;
   .pages {
     display: none;
   }
-  .curren {
-    color: #000;
-  }
   > * {
-    padding: 0 10px;
+    display: inline-block;
+    margin-right: 3px;
+    margin-bottom: 10px;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    vertical-align: top;
+    @include css3-prefix('box-shadow', '0 1px 15px rgba(0, 0, 0, 0.1)');
+    @include border-radius(3px);
+    &.extend,
+    &.previouspostslink,
+    &.nextpostslink {
+      box-shadow: none;
+      color: #40464b;
+    }
     &.extend {
-      padding: 0 7px;
+        width: 45px;
+    }
+    &.current {
+      color: #fff;
+      background-color: $color-bg2;
+    }
+    &:last-child {
+      margin-right: 0;
     }
   }
   a {
-    color: #40464b;
+    color: $color-text2;
+    text-decoration: none;
     &:hover {
-      color: #fb7e22;
-      text-decoration: none;
+      color: $color-text3;
     }
-    .fa-long-arrow-left,
-    .fa-long-arrow-right {
+    .fa-angle-left,
+    .fa-angle-right {
       position: relative;
       top: 2px;
+      font-size: 30px;
     }
   }
 }
