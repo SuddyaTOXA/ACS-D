@@ -152,11 +152,10 @@
 .pagenavi-block {
   > span {
     display: inline-block;
-    padding-top: 2px;
     padding-right: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     color: $color-text2;
-    vertical-align: middle;
+    vertical-align: bottom;
   }
 }
 .wp-pagenavi {

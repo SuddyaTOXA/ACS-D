@@ -194,7 +194,8 @@ img {
   overflow: hidden;
   position: relative;
   min-height: 100%;
-  margin-bottom: -46px; }
+  margin-bottom: -46px;
+  padding-top: 232px; }
   .wrapper:after {
     content: '';
     display: block;
@@ -855,7 +856,7 @@ a.btn, .btn {
     background-image: -moz-linear-gradient(145deg, #07d0ce 0%, #8226bc 100%);
     background-image: -webkit-linear-gradient(145deg, #07d0ce 0%, #8226bc 100%);
     background-image: -ms-linear-gradient(145deg, #07d0ce 0%, #8226bc 100%);
-    opacity: 0.9; }
+    opacity: 0.95; }
   .section-got-challenge .container {
     position: relative;
     z-index: 10; }
@@ -1124,11 +1125,10 @@ a.btn, .btn {
 
 .pagenavi-block > span {
   display: inline-block;
-  padding-top: 2px;
   padding-right: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #2d3158;
-  vertical-align: middle; }
+  vertical-align: bottom; }
 
 .wp-pagenavi {
   display: inline-block;
@@ -1213,6 +1213,9 @@ a.btn, .btn {
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1400px) {
+  .wrapper {
+    padding-top: 172px; }
+
   .header {
     padding: 22px 0 20px; }
 
@@ -1242,6 +1245,9 @@ a.btn, .btn {
   .content-box-wrap {
     max-width: calc(100% - 240px); } }
 @media all and (max-width: 991px) {
+  .wrapper {
+    padding-top: 92px; }
+
   .header,
   .header.scrolling {
     padding: 7px 0 6px; }

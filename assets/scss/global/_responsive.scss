@@ -7,6 +7,9 @@
 }
 
 @media all and (max-width: 1400px) {
+  .wrapper {
+    padding-top: 172px;
+  }
   .header {
     padding: 22px 0 20px;
   }
@@ -60,6 +63,9 @@
 }
 
 @media all and (max-width: 991px) {
+  .wrapper {
+    padding-top: 92px;
+  }
   .header,
   .header.scrolling {
     padding: 7px 0 6px;
