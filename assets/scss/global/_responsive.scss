@@ -443,11 +443,16 @@
     min-height: 280px;
   }
   .article-title-box .section-title {
-    margin-bottom: 8px;
+    margin-bottom: 12px;
   }
-  .article-title-box {
-    margin-left: -20px;
-    margin-right: -20px;
+  .section-article.with-photo {
+    margin-top: -45px;
+  }
+  .with-photo {
+    .article-title-box {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
   }
 }
 
