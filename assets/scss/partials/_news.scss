@@ -1,4 +1,6 @@
 #sidebar {
+  position: relative;
+  left: -1px;
   float: right;
   width: 310px;
   margin-top: 88px;
@@ -6,11 +8,15 @@
   padding-right: 30px;
   padding-bottom: 6px;
   border-left: 1px solid #E5E6EB;
+  &.big {
+    width: 350px;
+  }
 }
   .sidebar-box {
     margin-top: -3px;
   }
   .widget-box {
+    max-width: 410px;
     margin-bottom: 48px;
   }
     .widget-title {
@@ -18,6 +24,9 @@
       @include font($bold, 1.625em, $font-raleway, 1.25);
       color: $color-text2;
       letter-spacing: -0.2px;
+      .big & {
+        font-weight: $medium;
+      }
     }
     .more-services-list {
        > li {
@@ -80,10 +89,21 @@
   overflow: hidden;
 }
 .content-box-wrap {
+  position: relative;
   overflow: hidden;
   max-width: calc(100% - 310px);
+  margin-bottom: 60px;
   padding-right: 30px;
-  padding-bottom: 90px;
+  padding-bottom: 30px;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: calc(100% - 90px);
+    top: 90px;
+    right: 0;
+    background-color: #E5E6EB;
+  }
 }
   .news-list {
     margin-bottom: 60px;

@@ -226,8 +226,13 @@ img {
     top: 0;
     left: 0;
     background-color: #8638E4; }
+  .content blockquote > * {
+    margin-bottom: 10px; }
+    .content blockquote > *:last-child {
+      margin-bottom: 0; }
   .content blockquote cite, .content blockquote strong {
     display: block;
+    margin-top: -10px;
     font-weight: 500;
     font-style: italic; }
 .content img {
@@ -1052,6 +1057,8 @@ a.btn, .btn {
       bottom: -14px; }
 
 #sidebar {
+  position: relative;
+  left: -1px;
   float: right;
   width: 310px;
   margin-top: 88px;
@@ -1059,11 +1066,14 @@ a.btn, .btn {
   padding-right: 30px;
   padding-bottom: 6px;
   border-left: 1px solid #E5E6EB; }
+  #sidebar.big {
+    width: 350px; }
 
 .sidebar-box {
   margin-top: -3px; }
 
 .widget-box {
+  max-width: 410px;
   margin-bottom: 48px; }
 
 .widget-title {
@@ -1072,6 +1082,8 @@ a.btn, .btn {
   line-height: 1.25;
   color: #2d3158;
   letter-spacing: -0.2px; }
+  .big .widget-title {
+    font-weight: 500; }
 
 .more-services-list > li {
   margin-bottom: 26px; }
@@ -1125,10 +1137,20 @@ a.btn, .btn {
   overflow: hidden; }
 
 .content-box-wrap {
+  position: relative;
   overflow: hidden;
   max-width: calc(100% - 310px);
+  margin-bottom: 60px;
   padding-right: 30px;
-  padding-bottom: 90px; }
+  padding-bottom: 30px; }
+  .content-box-wrap:after {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: calc(100% - 90px);
+    top: 90px;
+    right: 0;
+    background-color: #E5E6EB; }
 
 .news-list {
   margin-bottom: 60px; }
@@ -1533,11 +1555,17 @@ a.btn, .btn {
 
   .content-box-wrap {
     max-width: 100%;
-    padding-right: 0; }
+    padding-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #E5E6EB; }
+    .content-box-wrap:after {
+      content: none; }
 
   #sidebar {
     float: none;
     border: none;
+    left: 0;
     padding: 0;
     max-width: 600px;
     width: 100%; }
@@ -1641,7 +1669,11 @@ a.btn, .btn {
     min-height: 280px; }
 
   .article-title-box .section-title {
-    margin-bottom: 8px; } }
+    margin-bottom: 8px; }
+
+  .article-title-box {
+    margin-left: -20px;
+    margin-right: -20px; } }
 @media all and (max-width: 600px) {
   .banner-img-box img {
     max-width: 100%; } }
@@ -1650,9 +1682,5 @@ a.btn, .btn {
     max-width: 100%; }
     .section-page .content img {
       max-width: 100%; } }
-@media all and (max-width: 480px) {
-  .article-title-box img + .article-title-wrap {
-    padding-left: 10px;
-    padding-right: 10px; } }
 
 /*# sourceMappingURL=screen.css.map */

@@ -272,10 +272,17 @@
   .content-box-wrap {
     max-width: 100%;
     padding-right: 0;
+    margin-bottom: 45px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid #E5E6EB;
+    &:after {
+      content: none;
+    }
   }
   #sidebar {
     float: none;
     border: none;
+    left: 0;
     padding: 0;
     max-width: 600px;
     width: 100%;
@@ -438,6 +445,10 @@
   .article-title-box .section-title {
     margin-bottom: 8px;
   }
+  .article-title-box {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
 }
 
 @media all and (max-width: 600px) {
@@ -460,10 +471,7 @@
 }
 
 @media all and (max-width: 480px) {
-  .article-title-box img + .article-title-wrap {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
+
 }
 
 @media all and (max-width: 420px) {

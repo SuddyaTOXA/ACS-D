@@ -164,8 +164,15 @@ img {
       left: 0;
       background-color: #8638E4;
     }
+    > * {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     cite, strong {
       display: block;
+      margin-top: -10px;
       font-weight: 500;
       font-style: italic;
     }
