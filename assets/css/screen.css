@@ -1067,7 +1067,8 @@ a.btn, .btn {
   padding-bottom: 6px;
   border-left: 1px solid #E5E6EB; }
   #sidebar.big {
-    width: 350px; }
+    width: 340px;
+    padding-right: 0; }
 
 .sidebar-box {
   margin-top: -3px; }
