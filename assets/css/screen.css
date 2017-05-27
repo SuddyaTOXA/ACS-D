@@ -196,7 +196,7 @@ img {
     padding-left: 20px; }
     .content ol li:before {
       position: absolute;
-      top: 6px;
+      top: 5px;
       left: 0;
       counter-increment: myCounter;
       content: counter(myCounter) ".";
@@ -226,7 +226,7 @@ img {
     top: 0;
     left: 0;
     background-color: #8638E4; }
-  .content blockquote cite {
+  .content blockquote cite, .content blockquote strong {
     display: block;
     font-weight: 500;
     font-style: italic; }
@@ -1392,7 +1392,7 @@ a.btn, .btn {
     height: auto; } }
 @media all and (max-width: 991px) {
   .wrapper {
-    padding-top: 100px; }
+    padding-top: 110px; }
 
   .header,
   .header.scrolling {

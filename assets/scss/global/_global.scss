@@ -128,7 +128,7 @@ img {
       //margin-bottom: 24px;
       &:before {
         position: absolute;
-        top: 6px;
+        top: 5px;
         left: 0;
         counter-increment: myCounter;
         content:counter(myCounter)'.';
@@ -164,7 +164,7 @@ img {
       left: 0;
       background-color: #8638E4;
     }
-    cite {
+    cite, strong {
       display: block;
       font-weight: 500;
       font-style: italic;
