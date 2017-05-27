@@ -3,7 +3,7 @@ $(function(){
 	$(function() {
 	   var header = $('#header');
 	   setTimeout(function(){
-		   if ($('div').hasClass('header-with-bg')) {
+		   if (!($('body').hasClass('without-padding'))) {
 			   header.addClass('show-bg');
 		   }
 			header.addClass('show');

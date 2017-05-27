@@ -144,4 +144,8 @@ img {
     width: 100%;
     height: 46px;
   }
+  .without-padding & {
+    padding-top: 0;
+  }
 }
+
