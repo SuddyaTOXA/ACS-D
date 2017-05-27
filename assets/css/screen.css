@@ -157,6 +157,19 @@ img {
   line-height: 1.6; }
   .content *:last-child {
     margin-bottom: 0; }
+.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
+  margin-bottom: 12px;
+  max-width: 735px;
+  font: 600 2em "Raleway", Arial, sans-serif;
+  line-height: 1.35;
+  color: #2d3158;
+  letter-spacing: 0.2px; }
+.content h2 {
+  font-size: 1.875em; }
+.content h3 {
+  font-size: 1.675em; }
+.content h4, .content h5, .content h6 {
+  font-size: 1.4em; }
 .content a {
   color: #535674; }
 .content ul > li {
@@ -1251,9 +1264,11 @@ a.btn, .btn {
   overflow: hidden;
   position: relative;
   z-index: 10;
-  margin-bottom: 32px; }
+  margin-bottom: 30px; }
   .article-title-box .section-title {
-    margin-bottom: 32px; }
+    margin-bottom: 32px;
+    letter-spacing: 0;
+    word-spacing: -1px; }
   .article-title-box img {
     position: absolute;
     z-index: 20;
@@ -1300,6 +1315,43 @@ a.btn, .btn {
         word-spacing: -1px; }
       .article-title-box img + .article-title-wrap .line {
         margin-bottom: 12px; }
+
+.more-services-icon-list > li {
+  margin-bottom: 21px; }
+  .more-services-icon-list > li:last-child {
+    margin-bottom: 0; }
+  .more-services-icon-list > li a {
+    text-decoration: none; }
+    .more-services-icon-list > li a:hover .icon-title {
+      color: #ffcc00; }
+
+.icon-box {
+  display: table;
+  width: 100%;
+  min-height: 30px; }
+
+.icon-img-box {
+  display: table-cell;
+  padding-right: 10px;
+  width: 48px;
+  min-height: 10px;
+  vertical-align: middle; }
+
+.icon-title-box {
+  display: table-cell;
+  min-height: 10px; }
+
+.icon-title {
+  display: inline-block;
+  line-height: 1.25;
+  font-size: 15px;
+  color: #2d3158;
+  -webkit-transition: 0.2s;
+  -khtml-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -ms-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s; }
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1400px) {

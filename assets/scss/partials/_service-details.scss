@@ -1,0 +1,40 @@
+.more-services-icon-list {
+  > li {
+    margin-bottom: 21px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        .icon-title {
+          color: $color-text3;
+        }
+      }
+    }
+  }
+}
+    .icon-box {
+      display: table;
+      width: 100%;
+      min-height: 30px;
+    }
+      .icon-img-box {
+        display: table-cell;
+        padding-right: 10px;
+        width: 48px;
+        min-height: 10px;
+        vertical-align: middle;
+      }
+      .icon-title-box {
+        display: table-cell;
+        min-height: 10px;
+        //vertical-align: middle;
+      }
+        .icon-title {
+          display: inline-block;
+          line-height: 1.25;
+          font-size: 15px;
+          color: $color-text2;
+          @include transition($transition-link);
+        }

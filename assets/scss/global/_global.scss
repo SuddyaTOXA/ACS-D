@@ -78,12 +78,28 @@ img {
 
 .content {
   * {
-    //margin-bottom: 12px;
     margin-bottom: 25px;
     line-height: $line-height;
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  h1, h2 ,h3 ,h4 ,h5 ,h6 {
+    margin-bottom: 12px;
+    max-width: 735px;
+    @include font($semi-bold, 2em, $font-raleway, 1.35);
+    color: $color-text2;
+    letter-spacing: 0.2px;
+    //word-spacing: -0.7px;
+  }
+  h2 {
+    font-size: 1.875em;
+  }
+  h3 {
+    font-size: 1.675em;
+  }
+  h4, h5, h6 {
+    font-size: 1.4em;
   }
   a {
     color: $color-text;
