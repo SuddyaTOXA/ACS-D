@@ -78,7 +78,8 @@ img {
 
 .content {
   * {
-    margin-bottom: 12px;
+    //margin-bottom: 12px;
+    margin-bottom: 25px;
     line-height: $line-height;
     &:last-child {
       margin-bottom: 0;
@@ -101,6 +102,10 @@ img {
     margin-bottom: 12px;
     text-align: left;
   }
+  strong, b {
+    font-weight: 500;
+    color: $color-text2;
+  }
   blockquote {
     max-width: 640px;
     margin-left: auto;
@@ -108,19 +113,19 @@ img {
     text-align: left;
   }
   img {
-    max-width: 100%;
+    max-width: 480px;
     height: auto;
     &.alignleft {
       float: left;
-      margin: 4px 12px 12px 0;
+      margin: 9px 40px 22px 0;
     }
     &.alignright {
       float: right;
-      margin: 4px 0 12px 12px;
+      margin: 9px 0 22px 40px;
     }
     &.aligncenter{
       display: block;
-      margin: 0 auto 12px;
+      margin: 9px auto 22px;
       clear: both;
     }
   }
