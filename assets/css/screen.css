@@ -160,9 +160,36 @@ img {
 .content a {
   color: #535674; }
 .content ul > li {
-  list-style-type: disc; }
-.content ol > li {
-  list-style-type: decimal; }
+  position: relative;
+  padding-left: 20px; }
+  .content ul > li:before {
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 5px;
+    top: 10px;
+    left: 5px;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #12c1cc; }
+.content ol {
+  counter-reset: myCounter; }
+  .content ol li {
+    position: relative;
+    padding-left: 20px; }
+    .content ol li:before {
+      position: absolute;
+      top: 6px;
+      left: 0;
+      counter-increment: myCounter;
+      content: counter(myCounter) ".";
+      color: #12c1cc;
+      font: 700 1em "Roboto", Arial, sans-serif;
+      line-height: 1; }
 .content li {
   margin-bottom: 12px;
   text-align: left; }
@@ -170,10 +197,26 @@ img {
   font-weight: 500;
   color: #2d3158; }
 .content blockquote {
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left; }
+  position: relative;
+  padding: 2px 30px 5px 22px;
+  margin: 34px auto 30px;
+  text-align: left;
+  font-weight: 200;
+  font-style: italic;
+  letter-spacing: -0.3px;
+  word-spacing: 0.4px; }
+  .content blockquote:before {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #8638E4; }
+  .content blockquote cite {
+    display: block;
+    font-weight: 500;
+    font-style: italic; }
 .content img {
   max-width: 480px;
   height: auto; }
@@ -187,6 +230,8 @@ img {
     display: block;
     margin: 9px auto 22px;
     clear: both; }
+  .section-page .content img {
+    max-width: 380px; }
 .inverse .content {
   color: #ffffff; }
 
@@ -1063,6 +1108,9 @@ a.btn, .btn {
   -o-transition: 0.2s;
   transition: 0.2s; }
 
+.section-page {
+  overflow: hidden; }
+
 .content-box-wrap {
   overflow: hidden;
   max-width: calc(100% - 310px);
@@ -1190,6 +1238,9 @@ a.btn, .btn {
       top: 2px;
       font-size: 30px; }
 
+.news-details-header-box {
+  margin-bottom: 18px; }
+
 .section-article {
   padding-bottom: 92px; }
   .section-article .container {
@@ -1282,7 +1333,11 @@ a.btn, .btn {
     max-width: 240px; }
 
   .content-box-wrap {
-    max-width: calc(100% - 240px); } }
+    max-width: calc(100% - 240px); }
+
+  .section-page .content img {
+    max-width: 320px;
+    height: auto; } }
 @media all and (max-width: 991px) {
   .wrapper {
     padding-top: 100px; }
@@ -1389,6 +1444,8 @@ a.btn, .btn {
   .content img {
     max-width: 380px;
     height: auto; }
+    .section-page .content img {
+      max-width: 280px; }
     .content img.alignleft {
       float: left;
       margin: 9px 32px 22px 0; }
@@ -1419,7 +1476,8 @@ a.btn, .btn {
         margin-bottom: 30px; }
 
   .content-box-wrap {
-    max-width: 100%; }
+    max-width: 100%;
+    padding-right: 0; }
 
   #sidebar {
     float: none;
@@ -1427,9 +1485,6 @@ a.btn, .btn {
     padding: 0;
     max-width: 600px;
     width: 100%; }
-
-  .content-box-wrap {
-    padding: 0; }
 
   .recent-article-img-wrap {
     max-width: 100%;
@@ -1443,7 +1498,7 @@ a.btn, .btn {
     display: table-footer-group; }
 
   .pagenavi-block {
-    margin-bottom: 80px; }
+    margin-bottom: 0; }
 
   .section-article {
     padding-bottom: 62px; }
@@ -1451,6 +1506,8 @@ a.btn, .btn {
   .content img {
     max-width: 480px;
     height: auto; }
+    .section-page .content img {
+      max-width: 480px; }
     .content img.alignleft {
       display: block;
       float: none;
@@ -1489,9 +1546,6 @@ a.btn, .btn {
     .news-list > li {
       margin-bottom: 23px;
       padding-bottom: 30px; }
-
-  .pagenavi-block {
-    margin-bottom: 60px; }
 
   .widget-title {
     margin-bottom: 15px; }
@@ -1537,7 +1591,9 @@ a.btn, .btn {
     max-width: 100%; } }
 @media all and (max-width: 560px) {
   .content img {
-    max-width: 100%; } }
+    max-width: 100%; }
+    .section-page .content img {
+      max-width: 100%; } }
 @media all and (max-width: 480px) {
   .article-title-box img + .article-title-wrap {
     padding-left: 10px;

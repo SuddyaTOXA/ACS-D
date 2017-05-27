@@ -76,7 +76,9 @@
             @include transition($transition-link);
           }
 
-
+.section-page {
+  overflow: hidden;
+}
 .content-box-wrap {
   overflow: hidden;
   max-width: calc(100% - 310px);

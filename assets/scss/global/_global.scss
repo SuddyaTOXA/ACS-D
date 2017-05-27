@@ -89,28 +89,70 @@ img {
     color: $color-text;
   }
   ul {
-    & > li {
-      list-style-type: disc;
+     > li {
+       position: relative;
+       padding-left: 20px;
+       &:before {
+         position: absolute;
+         content: '';
+         width: 5px;
+         height: 5px;
+         top: 10px;
+         left: 5px;
+         @include border-radius(50%);
+         background-color: #12c1cc;
+       }
     }
   }
-  ol {
-    & > li {
-      list-style-type: decimal;
+  ol{
+    counter-reset: myCounter;
+    li {
+      position: relative;
+      padding-left: 20px;
+      //margin-bottom: 24px;
+      &:before {
+        position: absolute;
+        top: 6px;
+        left: 0;
+        counter-increment: myCounter;
+        content:counter(myCounter)'.';
+        color: #12c1cc;
+        @include font($bold, 1em, $font-main, 1);
+      }
     }
   }
+
   li {
     margin-bottom: 12px;
     text-align: left;
   }
   strong, b {
-    font-weight: 500;
+    font-weight: $medium;
     color: $color-text2;
   }
   blockquote {
-    max-width: 640px;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    padding: 2px 30px 5px 22px;
+    margin: 34px auto 30px;
     text-align: left;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: -0.3px;
+    word-spacing: 0.4px;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #8638E4;
+    }
+    cite {
+      display: block;
+      font-weight: 500;
+      font-style: italic;
+    }
   }
   img {
     max-width: 480px;
@@ -127,6 +169,9 @@ img {
       display: block;
       margin: 9px auto 22px;
       clear: both;
+    }
+    .section-page & {
+      max-width: 380px;
     }
   }
   .inverse & {
