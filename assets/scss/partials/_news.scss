@@ -17,8 +17,11 @@
     margin-top: -3px;
   }
   .widget-box {
-    max-width: 410px;
+    max-width: 412px;
     margin-bottom: 48px;
+    &:last-child {
+      margin-bottom: 55px;
+    }
   }
     .widget-title {
       margin-bottom: 25px;

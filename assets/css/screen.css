@@ -232,7 +232,6 @@ img {
       margin-bottom: 0; }
   .content blockquote cite, .content blockquote strong {
     display: block;
-    margin-top: -10px;
     font-weight: 500;
     font-style: italic; }
 .content img {
@@ -1074,8 +1073,10 @@ a.btn, .btn {
   margin-top: -3px; }
 
 .widget-box {
-  max-width: 410px;
+  max-width: 412px;
   margin-bottom: 48px; }
+  .widget-box:last-child {
+    margin-bottom: 55px; }
 
 .widget-title {
   margin-bottom: 25px;
@@ -1557,8 +1558,8 @@ a.btn, .btn {
   .content-box-wrap {
     max-width: 100%;
     padding-right: 0;
-    margin-bottom: 45px;
-    padding-bottom: 45px;
+    margin-bottom: 55px;
+    padding-bottom: 55px;
     border-bottom: 1px solid #E5E6EB; }
     .content-box-wrap:after {
       content: none; }
