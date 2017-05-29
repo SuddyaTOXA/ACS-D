@@ -1097,8 +1097,9 @@ textarea:-moz-placeholder {
     float: left;
     width: 50%;
     height: 640px; }
-    .recent-works-list > li:hover .recent-work-overlay,
-    .recent-works-list.items-6 > li:hover .recent-work-overlay {
+    .recent-works-list > li:hover .recent-work-overlay, .recent-works-list > li > a:focus .recent-work-overlay,
+    .recent-works-list.items-6 > li:hover .recent-work-overlay,
+    .recent-works-list.items-6 > li > a:focus .recent-work-overlay {
       left: 0;
       z-index: 101; }
     .recent-works-list > li img,
@@ -1540,7 +1541,7 @@ textarea:-moz-placeholder {
   line-height: 200px; }
   .service-img-wrap img {
     max-height: 200px;
-    max-width: auto;
+    max-width: 100%;
     vertical-align: middle; }
 
 .service-desc {
@@ -1548,8 +1549,12 @@ textarea:-moz-placeholder {
   .service-desc .content * {
     margin-bottom: 12px;
     line-height: 1.65; }
-  .service-desc a.btn, .service-desc .btn {
-    margin-top: 22px; }
+    .service-desc .content *:last-child {
+      margin-bottom: 0; }
+  .service-desc .content {
+    margin-bottom: 22px; }
+  .service-desc > *:last-child {
+    margin-bottom: 0; }
 
 .service-title {
   margin-bottom: 17px;

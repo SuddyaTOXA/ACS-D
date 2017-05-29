@@ -298,7 +298,8 @@
       float: left;
       width: 50%;
       height: 640px;
-      &:hover .recent-work-overlay {
+      &:hover .recent-work-overlay,
+      & > a:focus .recent-work-overlay {
         left: 0;
         z-index: 101;
       }

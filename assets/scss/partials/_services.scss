@@ -46,7 +46,7 @@
           line-height: 200px;
           img {
             max-height: 200px;
-            max-width: auto;
+            max-width: 100%;
             vertical-align: middle;
           }
         }
@@ -56,10 +56,16 @@
             * {
               margin-bottom: 12px;
               line-height: 1.65;
+              &:last-child {
+                margin-bottom: 0;
+              }
             }
           }
-          a.btn, .btn {
-            margin-top: 22px;
+          .content {
+            margin-bottom: 22px;
+          }
+          > *:last-child {
+            margin-bottom: 0;
           }
         }
         .service-title {
