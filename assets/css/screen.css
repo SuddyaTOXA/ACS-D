@@ -1531,7 +1531,8 @@ textarea:-moz-placeholder {
     text-align: left; }
 
 .service-box {
-  border: 1px solid #EFEEF4; }
+  border: 1px solid #EFEEF4;
+  background: #ffffff; }
 
 .service-img-wrap {
   min-height: 220px;
@@ -1994,7 +1995,7 @@ textarea:-moz-placeholder {
   .service-title {
     margin-bottom: 5px; }
 
-  .service-desc a.btn, .service-desc .btn {
-    margin-top: 14px; } }
+  .service-desc .content {
+    margin-bottom: 14px; } }
 
 /*# sourceMappingURL=screen.css.map */
