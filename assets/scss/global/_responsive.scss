@@ -544,6 +544,9 @@
   .service-desc .content {
     margin-bottom: 14px;
   }
+  textarea.input-style {
+    min-height: 150px;
+  }
 }
 
 @media all and (max-width: 420px) {

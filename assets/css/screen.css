@@ -2022,6 +2022,9 @@ textarea:-moz-placeholder {
     margin-bottom: 5px; }
 
   .service-desc .content {
-    margin-bottom: 14px; } }
+    margin-bottom: 14px; }
+
+  textarea.input-style {
+    min-height: 150px; } }
 
 /*# sourceMappingURL=screen.css.map */
