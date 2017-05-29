@@ -6,7 +6,8 @@
     }
     a {
       text-decoration: none;
-      &:hover {
+      &:hover,
+      &:focus {
         .icon-title {
           color: $color-text3;
         }

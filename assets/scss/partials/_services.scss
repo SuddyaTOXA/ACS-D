@@ -1,0 +1,68 @@
+.section-main {
+  padding-top: 174px;
+  padding-bottom: 234px;
+  text-align: center;
+  @include bg_gradient();
+  .container {
+  }
+  .section-title {
+    max-width: 680px;
+    margin: 0 auto 1px;
+  }
+  .content {
+    max-width: 680px;
+    margin: 0 auto;
+    font-weight: $light;
+    > * {
+      letter-spacing: 0.05px;
+    }
+  }
+}
+  .section-our-services {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .services-list {
+    text-align: center;
+    margin: -240px -10px -20px;
+    > li {
+      display: inline-block;
+      width: 33%;
+      padding: 0 8px;
+      margin-bottom: 20px;
+      vertical-align: top;
+      text-align: left;
+    }
+  }
+      .service-box {
+        border: 1px solid #EFEEF4;
+      }
+        .service-img-wrap {
+          min-height: 220px;
+          padding: 10px 20px 10px;
+          background-color: $color-bg5;
+          text-align: center;
+          line-height: 200px;
+          img {
+            max-height: 200px;
+            max-width: auto;
+            vertical-align: middle;
+          }
+        }
+        .service-desc {
+          padding: 35px 42px 39px 38px;
+          .content {
+            * {
+              line-height: 1.65;
+            }
+          }
+          a.btn, .btn {
+            margin-top: 22px;
+          }
+        }
+        .service-title {
+          margin-bottom: 17px;
+          @include font($bold, 1.25em, $font-raleway, 1.25);
+          color: #303845;
+          letter-spacing: -0.3px;
+        }

@@ -14,7 +14,8 @@ a.btn, .btn {
   @include font($bold, 16px, $font-raleway, 1.25);
   cursor: pointer;
   @include transition($transition-link);
-  &:hover {
+  &:hover,
+  &:focus {
     color: #FFB900;
     background-color: transparent;
   }
@@ -22,7 +23,8 @@ a.btn, .btn {
     color: #FFB900;
     background-color: transparent;
     border-color: #FFB900;
-    &:hover {
+    &:hover,
+    &:focus {
       color: #FFFFFF;
       background-color: #FFB900;
     }
@@ -40,14 +42,16 @@ a.btn, .btn {
     color: #5F58C2;
     background-color: $white;
     border-color: $white;
-    &:hover {
+    &:hover,
+    &:focus {
       color: $white;
       background-color: transparent;
     }
     &.inverse {
       color: $white;
       background-color: transparent;
-      &:hover {
+      &:hover,
+      &:focus {
         color: #5F58C2;
         background-color: $white;
       }
@@ -57,14 +61,16 @@ a.btn, .btn {
     color: $white;
     background-color: #FF8400;
     border-color: #FF8400;
-    &:hover {
+    &:hover,
+    &:focus {
       color: #FF8400;
       background-color: transparent;
     }
     &.inverse {
       color: #FF8400;
       background-color: transparent;
-      &:hover {
+      &:hover,
+      &:focus {
         color: $white;
         background-color: #FF8400;
       }
