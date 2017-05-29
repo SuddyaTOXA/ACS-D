@@ -8,25 +8,27 @@
   margin: 72px auto 0;
   a.btn, .btn {
     margin-top: 30px;
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: #ffa40e;
+      border-color: #ffa40e;
+    }
   }
 }
   .form-list {
     overflow: hidden;
-    margin: 0 -10px -10px;
+    margin: 0 -10px 0;
     > li {
       float: left;
       width: 50%;
       padding: 0 10px;
-      margin-bottom: 10px;
       &:last-child {
         margin-bottom: 0;
       }
       > ul {
         > li {
           margin-bottom: 10px;
-          :last-child {
-            margin-bottom: 10px;
-          }
         }
       }
     }
@@ -34,9 +36,12 @@
 
 .section-info {
   margin-top: -100px;
-  padding-top: 122px;
-  padding-bottom: 90px;
+  padding-top: 105px;
+  padding-bottom: 89px;
   background-color: $white;
+  &.no-form {
+    margin-top: 0;
+  }
 }
   .info-list {
     max-width: 900px;
@@ -66,7 +71,7 @@
           }
         }
         .info-desc {
-          padding: 3px 0 5px;
+          margin-top: 7px;
           .content {
             @include font($normal, 1.125em, $font-os, 1.25);
             color: #3d4452;

@@ -350,7 +350,7 @@ a.btn, .btn {
   font: 400 16px "Open Sans", Arial, sans-serif;
   line-height: 1.25;
   border: 1px solid #ffffff;
-  padding: 5px 12px;
+  padding: 5px 14px;
   background-color: #ffffff;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -358,12 +358,12 @@ a.btn, .btn {
   -ms-transition: 0.35s;
   -o-transition: 0.35s;
   transition: 0.35s;
-  -webkit-border-radius: 5px;
-  -khtml-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px; }
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
   .input-style:hover, .input-style:active, .input-style:focus {
     border-color: #ffcc00; }
   .input-style.wpcf7-not-valid, .input-style.error {
@@ -371,7 +371,7 @@ a.btn, .btn {
 
 textarea.input-style {
   line-height: 26px;
-  padding: 5px 12px;
+  padding: 12px 12px;
   width: 100%;
   min-height: 190px;
   resize: none;
@@ -1206,14 +1206,14 @@ textarea:-moz-placeholder {
 #sidebar {
   position: relative;
   left: -1px;
-  float: right;
+  float: left;
   width: 310px;
   margin-top: 88px;
   padding-left: 40px;
   padding-right: 30px;
   padding-bottom: 6px;
   border-left: 1px solid #E5E6EB; }
-  #sidebar.big {
+  .big #sidebar {
     width: 340px;
     padding-right: 0; }
 
@@ -1289,6 +1289,7 @@ textarea:-moz-placeholder {
   overflow: hidden; }
 
 .content-box-wrap {
+  float: left;
   position: relative;
   overflow: hidden;
   max-width: calc(100% - 310px);
@@ -1303,6 +1304,8 @@ textarea:-moz-placeholder {
     top: 90px;
     right: 0;
     background-color: #E5E6EB; }
+  .big .content-box-wrap {
+    max-width: calc(100% - 340px); }
 
 .news-list {
   margin-bottom: 60px; }
@@ -1609,27 +1612,30 @@ textarea:-moz-placeholder {
   margin: 72px auto 0; }
   .form-box a.btn, .form-box .btn {
     margin-top: 30px; }
+    .form-box a.btn:hover, .form-box a.btn:focus, .form-box .btn:hover, .form-box .btn:focus {
+      color: #ffffff;
+      background-color: #ffa40e;
+      border-color: #ffa40e; }
 
 .form-list {
   overflow: hidden;
-  margin: 0 -10px -10px; }
+  margin: 0 -10px 0; }
   .form-list > li {
     float: left;
     width: 50%;
-    padding: 0 10px;
-    margin-bottom: 10px; }
+    padding: 0 10px; }
     .form-list > li:last-child {
       margin-bottom: 0; }
     .form-list > li > ul > li {
       margin-bottom: 10px; }
-      .form-list > li > ul > li :last-child {
-        margin-bottom: 10px; }
 
 .section-info {
   margin-top: -100px;
-  padding-top: 122px;
-  padding-bottom: 90px;
+  padding-top: 105px;
+  padding-bottom: 89px;
   background-color: #ffffff; }
+  .section-info.no-form {
+    margin-top: 0; }
 
 .info-list {
   max-width: 900px;
@@ -1657,7 +1663,7 @@ textarea:-moz-placeholder {
     vertical-align: middle; }
 
 .info-desc {
-  padding: 3px 0 5px; }
+  margin-top: 7px; }
   .info-desc .content {
     font: 400 1.125em "Open Sans", Arial, sans-serif;
     line-height: 1.25;
@@ -1702,6 +1708,8 @@ textarea:-moz-placeholder {
 
   .content-box-wrap {
     max-width: calc(100% - 240px); }
+    .big .content-box-wrap {
+      max-width: calc(100% - 240px); }
 
   .section-page .content img {
     max-width: 320px;
@@ -1854,6 +1862,8 @@ textarea:-moz-placeholder {
     border-bottom: 1px solid #E5E6EB; }
     .content-box-wrap:after {
       content: none; }
+    .big .content-box-wrap {
+      max-width: 100%; }
 
   #sidebar {
     float: none;
@@ -1895,7 +1905,10 @@ textarea:-moz-placeholder {
       margin: 9px auto 22px; }
 
   .article-title-box img + .article-title-wrap {
-    min-height: 360px; } }
+    min-height: 360px; }
+
+  .info-list > li {
+    width: 49%; } }
 @media all and (max-width: 736px) {
   .recent-works-list > li,
   .recent-works-list .items-6 > li {
@@ -1944,7 +1957,14 @@ textarea:-moz-placeholder {
   .recent-articles-list > li {
     margin-bottom: 20px; }
     .recent-articles-list > li:last-child {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+
+  .form-list > li {
+    width: 100%; }
+
+  textarea.input-style {
+    padding-left: 14px;
+    padding-right: 14px; } }
 @media all and (max-width: 640px) {
   .box-title {
     font-size: 2em; }
@@ -1974,12 +1994,21 @@ textarea:-moz-placeholder {
   .section-main {
     padding-top: 130px;
     padding-bottom: 210px; }
+    .section-main.contact {
+      padding-top: 130px; }
+
+  .form-box {
+    margin-top: 52px; }
 
   .services-list > li {
     width: 100%; }
 
   .service-desc {
-    padding: 25px 25px 25px; } }
+    padding: 25px 25px 25px; }
+
+  .section-info {
+    padding-top: 82px;
+    padding-bottom: 72px; } }
 @media all and (max-width: 600px) {
   .banner-img-box img {
     max-width: 100%; } }
@@ -1987,7 +2016,11 @@ textarea:-moz-placeholder {
   .content img {
     max-width: 100%; }
     .section-page .content img {
-      max-width: 100%; } }
+      max-width: 100%; }
+
+  .info-list > li {
+    width: 100%;
+    padding: 0; } }
 @media all and (max-width: 480px) {
   .service-desc {
     padding: 20px 10px 20px; }

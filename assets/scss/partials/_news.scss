@@ -1,14 +1,14 @@
 #sidebar {
   position: relative;
   left: -1px;
-  float: right;
+  float: left;
   width: 310px;
   margin-top: 88px;
   padding-left: 40px;
   padding-right: 30px;
   padding-bottom: 6px;
   border-left: 1px solid #E5E6EB;
-  &.big {
+  .big & {
     width: 340px;
     padding-right: 0;
   }
@@ -100,6 +100,7 @@
   overflow: hidden;
 }
 .content-box-wrap {
+  float: left;
   position: relative;
   overflow: hidden;
   max-width: calc(100% - 310px);
@@ -114,6 +115,9 @@
     top: 90px;
     right: 0;
     background-color: #E5E6EB;
+  }
+  .big & {
+    max-width: calc(100% - 340px);
   }
 }
   .news-list {

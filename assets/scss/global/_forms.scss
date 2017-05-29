@@ -6,10 +6,10 @@
   line-height: 4px;
   @include font($normal, 16px, $font-os, 1.25);
   border: 1px solid $white;
-  padding: 5px 12px;
+  padding: 5px 14px;
   background-color: $white;
   @include transition($transition-other);
-  @include border-radius($radius-small);
+  @include border-radius(3px);
   &:hover,
   &:active,
   &:focus {
@@ -22,7 +22,7 @@
 }
 textarea.input-style {
   line-height: 26px;
-  padding: 5px 12px;
+  padding: 12px 12px;
   width: 100%;
   min-height: 190px;
   resize: none;
