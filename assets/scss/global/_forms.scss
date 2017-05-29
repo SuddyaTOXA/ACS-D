@@ -1,0 +1,92 @@
+.input-style {
+  display: block;
+  width: 100%;
+  margin: 0;
+  min-height: 40px;
+  line-height: 4px;
+  @include font($normal, 16px, $font-os, 1.25);
+  border: 1px solid $white;
+  padding: 5px 12px;
+  background-color: $white;
+  @include transition($transition-other);
+  @include border-radius($radius-small);
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $color-text3;
+  }
+  &.wpcf7-not-valid,
+  &.error {
+    border-color: #ff0000;
+  }
+}
+textarea.input-style {
+  line-height: 26px;
+  padding: 5px 12px;
+  width: 100%;
+  min-height: 190px;
+  resize: none;
+  @include font($normal, 16px, $font-os, 1.25);
+  border: 1px solid $white;
+  @include border-radius($radius-small);
+}
+input::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: $normal;
+  font-family: $font-os;
+  color: #bbbcce;
+  @include transition($transition-other);
+}
+input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: $normal;
+  font-family: $font-os;
+  color: #bbbcce;
+  @include transition($transition-other);
+}
+input:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: $normal;
+  font-family: $font-os;
+  color: #bbbcce;
+  @include transition($transition-other);
+}
+input:-moz-placeholder {
+  font-size: 14px;
+  font-weight: $normal;
+  font-family: $font-os;
+  color: #bbbcce;
+  @include transition($transition-other);
+}
+
+textarea::-webkit-input-placeholder {
+  font-size: 14px;
+  font-weight: $normal;
+  font-family: $font-os;
+  color: #bbbcce;
+  @include transition($transition-other);
+}
+textarea::-moz-placeholder {
+  font-size: 14px;
+  font-weight: $normal;
+  font-family: $font-os;
+  color: #bbbcce;
+  @include transition($transition-other);
+}
+textarea:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: $normal;
+  font-family: $font-os;
+  color: #bbbcce;
+  @include transition($transition-other);
+}
+textarea:-moz-placeholder {
+
+font-size: 14px;
+  font-weight: $normal;
+  font-family: $font-os;
+  color: #bbbcce;;
+  @include transition($transition-other);
+}
+
+
