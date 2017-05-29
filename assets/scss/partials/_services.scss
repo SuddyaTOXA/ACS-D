@@ -13,7 +13,8 @@
     max-width: 680px;
     margin: 0 auto;
     font-weight: $light;
-    > * {
+    * {
+      margin-bottom: 2px;
       letter-spacing: 0.05px;
     }
   }
@@ -53,6 +54,7 @@
           padding: 35px 42px 39px 38px;
           .content {
             * {
+              margin-bottom: 12px;
               line-height: 1.65;
             }
           }

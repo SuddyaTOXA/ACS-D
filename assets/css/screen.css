@@ -1370,7 +1370,8 @@ a.btn, .btn {
     max-width: 680px;
     margin: 0 auto;
     font-weight: 300; }
-    .section-main .content > * {
+    .section-main .content * {
+      margin-bottom: 2px;
       letter-spacing: 0.05px; }
 
 .section-our-services {
@@ -1405,6 +1406,7 @@ a.btn, .btn {
 .service-desc {
   padding: 35px 42px 39px 38px; }
   .service-desc .content * {
+    margin-bottom: 12px;
     line-height: 1.65; }
   .service-desc a.btn, .service-desc .btn {
     margin-top: 22px; }
