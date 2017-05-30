@@ -345,12 +345,11 @@ a.btn, .btn {
   display: block;
   width: 100%;
   margin: 0;
-  min-height: 40px;
-  line-height: 4px;
+  min-height: 42px;
   font: 400 16px "Open Sans", Arial, sans-serif;
   line-height: 1.25;
   border: 1px solid #ffffff;
-  padding: 5px 14px;
+  padding: 6px 14px;
   background-color: #ffffff;
   -webkit-transition: 0.35s;
   -khtml-transition: 0.35s;
@@ -372,7 +371,7 @@ a.btn, .btn {
 textarea.input-style {
   line-height: 1.5;
   padding: 12px 12px;
-  min-height: 190px;
+  min-height: 198px;
   resize: none; }
 
 input::-webkit-input-placeholder {
