@@ -1691,8 +1691,8 @@ textarea:-moz-placeholder {
     position: relative;
     z-index: 30;
     height: 100vh;
-    padding-top: 120px;
-    padding-bottom: 120px; }
+    padding-top: 140px;
+    padding-bottom: 100px; }
 
 .hero-box {
   max-width: 450px; }
@@ -2099,7 +2099,7 @@ textarea:-moz-placeholder {
 
   .info-list > li {
     width: 49%; } }
-@media all and (max-width: 736px) {
+@media all and (max-width: 767px) {
   .recent-works-list > li,
   .recent-works-list .items-6 > li {
     width: 100% !important;
@@ -2165,6 +2165,7 @@ textarea:-moz-placeholder {
     margin-left: 0;
     margin-right: 0; }
     .about-img-list > li {
+      float: none;
       width: 100%;
       padding: 0; }
 
@@ -2179,7 +2180,12 @@ textarea:-moz-placeholder {
   .hero-title {
     padding-bottom: 15px;
     margin-bottom: 12px;
-    font-size: 1.6em; }
+    font-size: 1.8em; }
+
+  .section-hero.vertical-align .container {
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 90px; }
 
   .section-pre-project {
     padding-top: 60px; }
