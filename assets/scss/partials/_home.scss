@@ -40,7 +40,8 @@
       letter-spacing: 0.7px;
       color: $white;
     }
-    .banner-title {
+    .banner-title,
+    .hero-desc {
       @include font($bold, 2.875em, $font-raleway, 1.25);
       letter-spacing: -0.3px;
       text-transform: uppercase;
