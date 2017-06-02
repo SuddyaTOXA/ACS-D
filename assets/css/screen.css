@@ -1171,12 +1171,12 @@ textarea:-moz-placeholder {
     left: -400%;
     top: -100%;
     background-color: rgba(45, 49, 88, 0.9);
-    -webkit-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
-    -khtml-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
-    -moz-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
-    -ms-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
-    -o-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
-    transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
+    -webkit-transform: scale(5) translate3d(0, 0, 0) rotate(-45deg);
+    -khtml-transform: scale(5) translate3d(0, 0, 0) rotate(-45deg);
+    -moz-transform: scale(5) translate3d(0, 0, 0) rotate(-45deg);
+    -ms-transform: scale(5) translate3d(0, 0, 0) rotate(-45deg);
+    -o-transform: scale(5) translate3d(0, 0, 0) rotate(-45deg);
+    transform: scale(5) translate3d(0, 0, 0) rotate(-45deg);
     -webkit-transition: 0.5s;
     -khtml-transition: 0.5s;
     -moz-transition: 0.5s;
@@ -1195,12 +1195,12 @@ textarea:-moz-placeholder {
   vertical-align: bottom;
   color: #ffffff;
   opacity: 0;
-  -webkit-transition: 1.5s;
-  -khtml-transition: 1.5s;
-  -moz-transition: 1.5s;
-  -ms-transition: 1.5s;
-  -o-transition: 1.5s;
-  transition: 1.5s; }
+  -webkit-transition: all 0.5s ease-out 0.3s;
+  -khtml-transition: all 0.5s ease-out 0.3s;
+  -moz-transition: all 0.5s ease-out 0.3s;
+  -ms-transition: all 0.5s ease-out 0.3s;
+  -o-transition: all 0.5s ease-out 0.3s;
+  transition: all 0.5s ease-out 0.3s; }
 
 .recent-work-type {
   max-width: 500px;
