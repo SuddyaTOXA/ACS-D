@@ -2,6 +2,9 @@
 @media all and (max-width: 1400px) {
   .wrapper {
     padding-top: 172px;
+    .portfolio-page & {
+      padding-top: 119px;
+    }
   }
   .header {
     padding: 22px 0 20px;
@@ -21,6 +24,11 @@
       .fa-chevron-right {
         right: 5px;
       }
+    }
+  }
+  .recent-works-list {
+    > li {
+      height: 375px;
     }
   }
 }
@@ -76,6 +84,9 @@
 @media all and (max-width: 991px) {
   .wrapper {
     padding-top: 110px;
+    .portfolio-page & {
+      padding-top: 65px;
+    }
   }
   .header,
   .header.scrolling {
@@ -159,6 +170,9 @@
     max-width: 340px;
   }
   .recent-works-list {
+    > li {
+      height: 360px;
+    }
     &.items-6 {
       > li {
         &:nth-child(1),

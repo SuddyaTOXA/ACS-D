@@ -293,23 +293,31 @@
     overflow: hidden;
     background: #2aa0c9;
     > li {
+      overflow: hidden;
+      position: relative;
+      float: left;
+      height: 640px;
+      width: 50%;
       @include bg();
       img {
         opacity: 0;
       }
+      &:hover .recent-work-overlay,
+      & > a:focus .recent-work-overlay {
+        left: 0;
+        z-index: 101;
+        &:after {
+          left: 0;
+        }
+        .recent-work-decs {
+          opacity: 1;
+        }
+      }
     }
     &.items-6 {
       > li {
-        overflow: hidden;
-        position: relative;
-        float: left;
         width: 50%;
         height: 640px;
-        &:hover .recent-work-overlay,
-        & > a:focus .recent-work-overlay {
-          left: 0;
-          z-index: 101;
-        }
         img {
           position: absolute;
           z-index: 100;
@@ -390,21 +398,33 @@
       top: 0;
       left: -101%;
       padding: 85px 60px 85px;
-      background-color: rgba(45, 49, 88, 0.9);
-      @include transition($transition-other);
-      //.recent-works-list > li:hover & {
-      //  left: 0;
-      //}
+      //@include transition($transition-other);
+      &:after {
+        position: absolute;
+        content: '';
+        z-index: 100;
+        width: 100%;
+        padding-bottom: 100%;
+        left: -400%;
+        top: -100%;
+        background-color: rgba(45, 49, 88, 0.9);
+        @include css3-prefix('transform', 'scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg)');
+        @include transition(0.5s);
+      }
       .content {
         max-width: 500px;
       }
     }
       .recent-work-decs {
+        position: relative;
+        z-index: 110;
         display: table-cell;
         width: 100%;
         min-height: 50px;
         vertical-align: bottom;
         color: $white;
+        opacity: 0;
+        @include css3-prefix('transition', '1.5s');
       }
         .recent-work-type {
           max-width: 500px;

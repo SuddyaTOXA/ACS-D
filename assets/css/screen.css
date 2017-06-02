@@ -279,6 +279,8 @@ img {
     height: 46px; }
   .without-padding .wrapper {
     padding-top: 0; }
+  .portfolio-page .wrapper {
+    padding-top: 158px; }
 
 a.btn, .btn {
   position: relative;
@@ -1092,20 +1094,26 @@ textarea:-moz-placeholder {
   overflow: hidden;
   background: #2aa0c9; }
   .recent-works-list > li {
+    overflow: hidden;
+    position: relative;
+    float: left;
+    height: 640px;
+    width: 50%;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
     .recent-works-list > li img {
       opacity: 0; }
-  .recent-works-list.items-6 > li {
-    overflow: hidden;
-    position: relative;
-    float: left;
-    width: 50%;
-    height: 640px; }
-    .recent-works-list.items-6 > li:hover .recent-work-overlay, .recent-works-list.items-6 > li > a:focus .recent-work-overlay {
+    .recent-works-list > li:hover .recent-work-overlay, .recent-works-list > li > a:focus .recent-work-overlay {
       left: 0;
       z-index: 101; }
+      .recent-works-list > li:hover .recent-work-overlay:after, .recent-works-list > li > a:focus .recent-work-overlay:after {
+        left: 0; }
+      .recent-works-list > li:hover .recent-work-overlay .recent-work-decs, .recent-works-list > li > a:focus .recent-work-overlay .recent-work-decs {
+        opacity: 1; }
+  .recent-works-list.items-6 > li {
+    width: 50%;
+    height: 640px; }
     .recent-works-list.items-6 > li img {
       position: absolute;
       z-index: 100;
@@ -1153,23 +1161,46 @@ textarea:-moz-placeholder {
   height: 100%;
   top: 0;
   left: -101%;
-  padding: 85px 60px 85px;
-  background-color: rgba(45, 49, 88, 0.9);
-  -webkit-transition: 0.35s;
-  -khtml-transition: 0.35s;
-  -moz-transition: 0.35s;
-  -ms-transition: 0.35s;
-  -o-transition: 0.35s;
-  transition: 0.35s; }
+  padding: 85px 60px 85px; }
+  .recent-work-overlay:after {
+    position: absolute;
+    content: '';
+    z-index: 100;
+    width: 100%;
+    padding-bottom: 100%;
+    left: -400%;
+    top: -100%;
+    background-color: rgba(45, 49, 88, 0.9);
+    -webkit-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
+    -khtml-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
+    -moz-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
+    -ms-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
+    -o-transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
+    transform: scale(5) translateX(0px) translateY(0px) translateZ(0px) rotate(-45deg);
+    -webkit-transition: 0.5s;
+    -khtml-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s; }
   .recent-work-overlay .content {
     max-width: 500px; }
 
 .recent-work-decs {
+  position: relative;
+  z-index: 110;
   display: table-cell;
   width: 100%;
   min-height: 50px;
   vertical-align: bottom;
-  color: #ffffff; }
+  color: #ffffff;
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  -khtml-transition: 1.5s;
+  -moz-transition: 1.5s;
+  -ms-transition: 1.5s;
+  -o-transition: 1.5s;
+  transition: 1.5s; }
 
 .recent-work-type {
   max-width: 500px;
@@ -1858,11 +1889,15 @@ textarea:-moz-placeholder {
   padding-top: 102px;
   padding-bottom: 120px;
   background-color: #fff; }
+  .section-full-text.project .content img.aligncenter {
+    width: auto; }
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1400px) {
   .wrapper {
     padding-top: 172px; }
+    .portfolio-page .wrapper {
+      padding-top: 119px; }
 
   .header {
     padding: 22px 0 20px; }
@@ -1877,7 +1912,10 @@ textarea:-moz-placeholder {
   .swiper-banner .swiper-button-next {
     width: 80px; }
     .swiper-banner .swiper-button-next .fa-chevron-right {
-      right: 5px; } }
+      right: 5px; }
+
+  .recent-works-list > li {
+    height: 375px; } }
 @media all and (max-width: 1280px) {
   .banner-text-box {
     padding-right: 20px; }
@@ -1907,6 +1945,8 @@ textarea:-moz-placeholder {
 @media all and (max-width: 991px) {
   .wrapper {
     padding-top: 110px; }
+    .portfolio-page .wrapper {
+      padding-top: 65px; }
 
   .header,
   .header.scrolling {
@@ -1964,6 +2004,8 @@ textarea:-moz-placeholder {
   .swiper-what-we-do {
     max-width: 340px; }
 
+  .recent-works-list > li {
+    height: 360px; }
   .recent-works-list.items-6 > li:nth-child(1), .recent-works-list.items-6 > li:nth-child(4), .recent-works-list.items-6 > li:nth-child(5) {
     width: 60%;
     height: 400px; }

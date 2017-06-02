@@ -224,4 +224,11 @@
   padding-top: 102px;
   padding-bottom: 120px;
   background-color: #fff;
+  &.project {
+    .content {
+      img.aligncenter {
+        width: auto;
+      }
+    }
+  }
 }
