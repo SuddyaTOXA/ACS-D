@@ -1864,7 +1864,8 @@ textarea:-moz-placeholder {
   font-size: 2em; }
 .project .content img {
   max-width: 480px;
-  height: auto; }
+  height: auto;
+  width: auto; }
   .project .content img.aligncenter {
     display: block;
     max-width: 100%;
@@ -1889,8 +1890,13 @@ textarea:-moz-placeholder {
   padding-top: 102px;
   padding-bottom: 120px;
   background-color: #fff; }
-  .section-full-text.project .content img.aligncenter {
-    width: auto; }
+  .section-full-text.project .content img {
+    display: block;
+    max-width: 100%;
+    margin: 9px auto 22px;
+    clear: both; }
+    .section-full-text.project .content img.aligncenter {
+      width: auto; }
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1400px) {
@@ -2318,6 +2324,6 @@ textarea:-moz-placeholder {
 @media all and (max-width: 420px) {
   .recent-works-list > li {
     height: auto !important;
-    padding-bottom: 75%; } }
+    padding-bottom: 100%; } }
 
 /*# sourceMappingURL=screen.css.map */
