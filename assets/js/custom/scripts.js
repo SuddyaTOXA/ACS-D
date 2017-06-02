@@ -1,7 +1,11 @@
 $(function(){
 	// header fade
 	$(function() {
-	   var header = $('#header');
+	   var header = $('#header'),
+           body = $('body');
+        setTimeout(function(){
+            body .addClass('show');
+        },400);
 	   setTimeout(function(){
 		   if (!($('body').hasClass('without-padding'))) {
 			   header.addClass('show-bg');
@@ -71,6 +75,34 @@ $(function(){
 			loop: true,
 			autoHeight: true
 		});
+        /*! Fades out the whole page when clicking links */
+        $('a').click(function(e) {
+            var header = $('#header'),
+                body = $('body');
 
+            e.preventDefault();
+            newLocation = this.href;
+
+            header.removeClass('show');
+            setTimeout(function(){
+                body.removeClass('show');
+            },400);
+            setTimeout(function(){
+                newpage();
+            },800);
+        });
+        function newpage() {
+            window.location = newLocation;
+        }
+
+        // /*! Fades out the whole page when clicking links */
+        // $('a').click(function(e) {
+        //     e.preventDefault();
+        //     newLocation = this.href;
+        //     $('body').fadeOut('slow', newpage);
+        // });
+        // function newpage() {
+        //     window.location = newLocation;
+        // }
     });
 });

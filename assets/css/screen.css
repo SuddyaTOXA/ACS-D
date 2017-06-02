@@ -112,6 +112,15 @@ a:hover {
   -o-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+  body.show {
+    opacity: 1; }
+
 em, i {
   font-style: italic; }
 
@@ -251,6 +260,8 @@ img {
     max-width: 380px; }
 .inverse .content {
   color: #ffffff; }
+  .inverse .content h1, .inverse .content h2, .inverse .content h3, .inverse .content h4, .inverse .content h5, .inverse .content h6 {
+    color: #ffffff; }
 
 /*----------------------------------------------------------------------------------*/
 /*-------------------------------------WRAPPER--------------------------------------*/
@@ -1842,6 +1853,11 @@ textarea:-moz-placeholder {
     color: #2d3158; }
     .prev-next-box a:hover, .prev-next-box a:focus {
       color: #ffcc00; }
+
+.section-full-text {
+  padding-top: 102px;
+  padding-bottom: 120px;
+  background-color: #fff; }
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1400px) {
