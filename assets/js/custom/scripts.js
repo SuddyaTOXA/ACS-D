@@ -81,19 +81,22 @@ $(function(){
                 body = $('body');
 
             e.preventDefault();
-            newLocation = this.href;
+            var hash = $(this).attr('href'),
+                newLocation = this.href;
 
-            header.removeClass('show');
-            setTimeout(function(){
-                body.removeClass('show');
-            },400);
-            setTimeout(function(){
-                newpage();
-            },800);
+            console.log(hash);
+            console.log(newLocation);
+
+            if (hash != '#' || !(hash)) {
+                header.removeClass('show');
+                setTimeout(function(){
+                    body.removeClass('show');
+                },400);
+                setTimeout(function(){
+                    window.location = newLocation;
+                },800);
+            }
         });
-        function newpage() {
-            window.location = newLocation;
-        }
 
         // /*! Fades out the whole page when clicking links */
         // $('a').click(function(e) {

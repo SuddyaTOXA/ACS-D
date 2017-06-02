@@ -2186,6 +2186,9 @@ textarea:-moz-placeholder {
     padding-left: 14px;
     padding-right: 14px; } }
 @media all and (max-width: 640px) {
+  .recent-works-list > li img {
+    display: none; }
+
   .box-title {
     font-size: 2em; }
     .box-title.line {
@@ -2312,5 +2315,9 @@ textarea:-moz-placeholder {
 
   textarea.input-style {
     min-height: 150px; } }
+@media all and (max-width: 420px) {
+  .recent-works-list > li {
+    height: auto !important;
+    padding-bottom: 75%; } }
 
 /*# sourceMappingURL=screen.css.map */

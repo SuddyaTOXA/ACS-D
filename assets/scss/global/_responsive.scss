@@ -442,6 +442,13 @@
 }
 
 @media all and (max-width: 640px) {
+  .recent-works-list {
+    > li {
+      img {
+        display: none;
+      }
+    }
+  }
   .box-title {
     font-size: 2em;
     &.line {
@@ -616,9 +623,14 @@
 }
 
 @media all and (max-width: 420px) {
-
+  .recent-works-list {
+    > li {
+      height: auto !important;
+      padding-bottom: 75%;
+    }
+  }
 }
 
-@media all and (max-width: 360px) {
+@media all and (max-width: 380px) {
 
 }
