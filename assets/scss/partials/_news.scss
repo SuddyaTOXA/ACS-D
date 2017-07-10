@@ -3,7 +3,7 @@
   left: -1px;
   float: left;
   width: 310px;
-  margin-top: 88px;
+  margin: 88px 0 60px;
   padding-left: 40px;
   padding-right: 30px;
   padding-bottom: 6px;
@@ -103,7 +103,8 @@
   float: left;
   position: relative;
   overflow: hidden;
-  max-width: calc(100% - 310px);
+  width: -webkit-calc(100% - 310px);
+  width: calc(100% - 310px);
   margin-bottom: 60px;
   padding-right: 30px;
   padding-bottom: 30px;
@@ -111,12 +112,14 @@
     position: absolute;
     content: '';
     width: 1px;
+    height: -webkit-calc(100% - 90px);
     height: calc(100% - 90px);
     top: 90px;
     right: 0;
     background-color: #E5E6EB;
   }
   .big & {
+    max-width: -webkit-calc(100% - 340px);
     max-width: calc(100% - 340px);
   }
 }
@@ -250,6 +253,17 @@
       position: relative;
       top: 2px;
       font-size: 30px;
+    }
+  }
+}
+
+.no-results {
+  padding: 10px 0 20px;
+  font-size: 1.2rem;
+  .content-box-wrap & {
+    margin-top: 50px;
+    @media all and (max-width: 860px) {
+      margin-top: 40px;
     }
   }
 }

@@ -38,6 +38,7 @@
         &:after {
           position: absolute;
           content: '';
+          width: -webkit-calc(100% - 70px);
           width: calc(100% - 70px);
           height: 2px;
           bottom: 0;
@@ -208,7 +209,7 @@
       text-align: center;
       a {
         display: inline-block;
-        padding: 10px 20px;
+        padding: 10px 30px;
         @include font($bold, 4.375em, $font-raleway, 1);
         text-transform: uppercase;
         text-decoration: none;

@@ -57,9 +57,11 @@
     height: 100%;
     img {
       position: absolute;
+      max-width: -webkit-calc(100% + 35px);
       max-width: calc(100% + 35px);
       height: auto;
       bottom: -153px;
+      left: -webkit-calc(50% + 65px);
       left: calc(50% + 65px);
       @include transform(-50%, 0);
     }
@@ -281,8 +283,11 @@
   .content {
     @include font($light, 1.375em, $font-main, 1.45);
   }
-  a.btn, .btn {
-    margin-top: 30px;
+  .btn {
+    margin: 30px 10px 0;
+    & + .btn {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -299,11 +304,15 @@
       height: 640px;
       width: 50%;
       @include bg();
+      > a {
+        text-decoration: none;
+      }
       img {
         opacity: 0;
       }
       &:hover .recent-work-overlay,
-      & > a:focus .recent-work-overlay {
+      & > a:focus .recent-work-overlay,
+      &.no_thumb .recent-work-overlay {
         left: 0;
         z-index: 101;
         &:after {
@@ -393,6 +402,7 @@
       position: absolute;
       z-index: 10;
       display: table;
+      width: -webkit-calc(100% + 1px);
       width: calc(100% + 1px);
       height: 100%;
       top: 0;

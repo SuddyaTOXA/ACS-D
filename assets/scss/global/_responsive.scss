@@ -2,8 +2,14 @@
 @media all and (max-width: 1400px) {
   .wrapper {
     padding-top: 172px;
+    .scrolling & {
+      padding-top: 152px;
+    }
     .portfolio-page & {
       padding-top: 119px;
+    }
+    .portfolio-page.scrolling & {
+      padding-top: 99px;
     }
   }
   .header {
@@ -63,12 +69,13 @@
 
 @media all and (max-width: 1024px) {
   #sidebar {
-    max-width: 240px;
+    width: 240px;
   }
   .content-box-wrap {
-    max-width: calc(100% - 240px);
+    &,
     .big & {
-      max-width: calc(100% - 240px);
+      width: -webkit-calc(100% - 240px);
+      width: calc(100% - 240px);
     }
   }
   .section-page {
@@ -83,14 +90,20 @@
 
 @media all and (max-width: 991px) {
   .wrapper {
-    padding-top: 110px;
-    .portfolio-page & {
+    &,
+    .scrolling & {
+      padding-top: 110px;
+    }
+    .portfolio-page &,
+    .portfolio-page.scrolling & {
       padding-top: 65px;
     }
   }
-  .header,
-  .header.scrolling {
-    padding: 7px 0 6px;
+  .header {
+    &,
+    .scrolling & {
+      padding: 7px 0 6px;
+    }
   }
   .desktop {
     display: none !important;
@@ -298,7 +311,8 @@
     }
   }
   .content-box-wrap {
-    max-width: 100%;
+    float: none;
+    width: 100%;
     padding-right: 0;
     margin-bottom: 55px;
     padding-bottom: 55px;
@@ -308,6 +322,7 @@
     }
     .big & {
       max-width: 100%;
+      width: 100%;
     }
   }
   #sidebar {
@@ -373,13 +388,21 @@
 @media all and (max-width: 767px) {
   .recent-works-list {
     > li {
-      width: 100% !important;
+      float: none;
+      width: 100%;
       height: 380px !important;
     }
-      .recent-work-overlay {
-        padding: 25px 15px 25px;
+    .recent-work-overlay {
+      padding: 25px 15px 25px;
+      left: 0;
+      z-index: 101;
+      &:after {
+        left: 0;
       }
-
+      .recent-work-decs {
+        opacity: 1;
+      }
+    }
   }
   .news-date {
     margin-bottom: 12px;
@@ -426,7 +449,7 @@
   }
   .recent-articles-list {
     > li {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       &:last-child {
         margin-bottom: 0;
       }
@@ -626,11 +649,23 @@
   .recent-works-list {
     > li {
       height: auto !important;
-      padding-bottom: 100%;
+      min-height: 380px;
+      padding-bottom: 0;
+    }
+    .recent-work-overlay {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      position: relative;
+      top: auto;
+      left: auto;
     }
   }
 }
 
 @media all and (max-width: 360px) {
-
+  .recent-works-list {
+    > li {
+      min-height: 340px;
+    }
+  }
 }

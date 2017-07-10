@@ -220,17 +220,47 @@ img {
   min-height: 100%;
   margin-bottom: -46px;
   padding-top: 232px;
+  @include animate();
+  .scrolling & {
+    padding-top: 172px;
+  }
   &:after {
     content: '';
     display: block;
     width: 100%;
     height: 46px;
   }
-  .without-padding & {
+  body.without-padding & {
     padding-top: 0;
   }
   .portfolio-page & {
     padding-top: 158px;
   }
+  .portfolio-page.scrolling & {
+    padding-top: 98px;
+  }
 }
 
+/*-----------------------404 PAGE------------------------*/
+.wrap-404 {
+  text-align: center;
+  padding: 30px 0 100px;
+  color: #457ac5;
+  font-size: 65px;
+  letter-spacing: 0;
+  .error-404 {
+    display: block;
+    margin-bottom: -25px;
+    font-size: 180px;
+    line-height: 1;
+    font-weight: 700;
+  }
+  @media all and (max-width: 480px) {
+    padding: 30px 0 60px;
+    font-size: 52px;
+    .error-404 {
+      margin-bottom: -18px;
+      font-size: 140px;
+    }
+  }
+}
