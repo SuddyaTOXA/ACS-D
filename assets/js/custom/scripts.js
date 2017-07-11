@@ -5,7 +5,7 @@ jQuery(function($){
     // header fade
     $(function() {
         setTimeout(function(){
-            body .addClass('show');
+            body.addClass('show');
         },400);
         setTimeout(function(){
             if (!body.hasClass('without-padding')) {
@@ -52,7 +52,7 @@ jQuery(function($){
         });
 
         /*! Fades out the whole page when clicking links */
-        $('a').click(function(e) {
+        $('a:not([target="_blank"])').click(function(e) {
             e.preventDefault();
 
             var hash = $(this).attr('href'),

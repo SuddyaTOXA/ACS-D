@@ -576,8 +576,16 @@ textarea:-moz-placeholder {
   -ms-transition: 0.35s;
   -o-transition: 0.35s;
   transition: 0.35s; }
-  .logo a:focus img {
-    outline: auto; }
+  .logo a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1; }
+    .logo a span:not(:only-child) {
+      font-size: 0;
+      display: none; }
+    .logo a:focus img {
+      outline: auto; }
   .logo img {
     max-width: 100%;
     max-height: 100%;
@@ -880,7 +888,8 @@ textarea:-moz-placeholder {
     height: 100%;
     padding: 160px 25px 40px; }
     .section-banner .container a.btn, .section-banner .container .btn {
-      margin-top: 32px; }
+      margin-top: 32px;
+      margin-right: 15px; }
 
 .banner-img-box,
 .banner-text-box {
@@ -1179,28 +1188,49 @@ textarea:-moz-placeholder {
       -ms-transform: translate(-50%, -50%);
       -o-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); }
-    .recent-works-list.items-6 > li:nth-child(1) {
+    .recent-works-list.items-6 > li:nth-child(6n+1) {
       width: 63.125%; }
-    .recent-works-list.items-6 > li:nth-child(4) {
+    .recent-works-list.items-6 > li:nth-child(6n+4) {
       float: right;
       width: 63.125%; }
-    .recent-works-list.items-6 > li:nth-child(2), .recent-works-list.items-6 > li:nth-child(3), .recent-works-list.items-6 > li:nth-child(5), .recent-works-list.items-6 > li:nth-child(6) {
+    .recent-works-list.items-6 > li:nth-child(6n+2), .recent-works-list.items-6 > li:nth-child(6n+3), .recent-works-list.items-6 > li:nth-child(6n+5), .recent-works-list.items-6 > li:nth-child(6n) {
       width: 36.875%;
       height: 320px; }
-      .recent-works-list.items-6 > li:nth-child(2) .recent-work-overlay, .recent-works-list.items-6 > li:nth-child(3) .recent-work-overlay, .recent-works-list.items-6 > li:nth-child(5) .recent-work-overlay, .recent-works-list.items-6 > li:nth-child(6) .recent-work-overlay {
+      .recent-works-list.items-6 > li:nth-child(6n+2) .recent-work-overlay, .recent-works-list.items-6 > li:nth-child(6n+3) .recent-work-overlay, .recent-works-list.items-6 > li:nth-child(6n+5) .recent-work-overlay, .recent-works-list.items-6 > li:nth-child(6n) .recent-work-overlay {
         padding: 25px 30px 25px; }
-  .recent-works-list.items-5 > li:nth-child(4) {
-    float: left;
-    width: 36.875%; }
-  .recent-works-list.items-5 > li:nth-child(5) {
+  .recent-works-list.items-5 > li:nth-child(5n+1) {
     width: 63.125%;
     height: 640px; }
-  .recent-works-list.items-4 > li:nth-child(4) {
-    width: 100%; }
-  .recent-works-list.items-2 > li:nth-child(1), .recent-works-list.items-2 > li:nth-child(2) {
+  .recent-works-list.items-5 > li:nth-child(5n+2), .recent-works-list.items-5 > li:nth-child(5n+3) {
+    width: 36.875%;
+    height: 320px; }
+    .recent-works-list.items-5 > li:nth-child(5n+2) .recent-work-overlay, .recent-works-list.items-5 > li:nth-child(5n+3) .recent-work-overlay {
+      padding: 25px 30px 25px; }
+  .recent-works-list.items-5 > li:nth-child(5n+4) {
+    width: 36.875%;
+    height: 560px; }
+  .recent-works-list.items-5 > li:nth-child(5n) {
+    width: 63.125%;
+    height: 560px; }
+  .recent-works-list.items-4 > li {
+    height: 640px; }
+    .recent-works-list.items-4 > li:nth-child(4n+2), .recent-works-list.items-4 > li:nth-child(4n+3) {
+      width: 36.875%; }
+    .recent-works-list.items-4 > li:nth-child(4n+1), .recent-works-list.items-4 > li:nth-child(4n) {
+      width: 63.125%; }
+  .recent-works-list.items-3 > li:nth-child(3n+1) {
+    width: 63.125%;
+    height: 640px; }
+  .recent-works-list.items-3 > li:nth-child(3n+2), .recent-works-list.items-3 > li:nth-child(3n) {
+    width: 36.875%;
+    height: 320px; }
+    .recent-works-list.items-3 > li:nth-child(3n+2) .recent-work-overlay, .recent-works-list.items-3 > li:nth-child(3n) .recent-work-overlay {
+      padding: 25px 30px 25px; }
+  .recent-works-list.items-2 > li {
     height: 640px;
     width: 50%; }
-  .recent-works-list.items-1 > li:nth-child(1) {
+  .recent-works-list.items-1 > li {
+    float: none;
     width: 100%; }
 
 .recent-work-overlay {
@@ -1990,7 +2020,9 @@ textarea:-moz-placeholder {
       right: 5px; }
 
   .recent-works-list > li {
-    height: 375px; } }
+    height: 375px; }
+  .recent-works-list.items-4 > li, .recent-works-list.items-2 > li, .recent-works-list.items-1 > li {
+    height: 480px; } }
 @media all and (max-width: 1280px) {
   .banner-text-box {
     padding-right: 20px; }
@@ -2079,27 +2111,9 @@ textarea:-moz-placeholder {
 
   .recent-works-list > li {
     height: 360px; }
-  .recent-works-list.items-6 > li:nth-child(1), .recent-works-list.items-6 > li:nth-child(4), .recent-works-list.items-6 > li:nth-child(5) {
-    width: 60%;
-    height: 400px; }
-  .recent-works-list.items-6 > li:nth-child(2), .recent-works-list.items-6 > li:nth-child(3), .recent-works-list.items-6 > li:nth-child(6) {
-    width: 40%;
-    height: 400px; }
-  .recent-works-list.items-5 > li:nth-child(4) {
-    float: left;
-    width: 60%; }
-  .recent-works-list.items-5 > li:nth-child(5) {
-    width: 100%;
-    height: 400px; }
-  .recent-works-list.items-4 > li:nth-child(4) {
-    width: 60%; }
-  .recent-works-list.items-3 > li:nth-child(3) {
-    width: 100%; }
-  .recent-works-list.items-2 > li:nth-child(1), .recent-works-list.items-2 > li:nth-child(2) {
-    height: 400px;
-    width: 50%; }
-  .recent-works-list.items-1 > li:nth-child(1) {
-    width: 100%; }
+  .recent-works-list.items-6 > li:nth-child(odd), .recent-works-list.items-6 > li:nth-child(even), .recent-works-list.items-5 > li:nth-child(odd), .recent-works-list.items-5 > li:nth-child(even), .recent-works-list.items-4 > li:nth-child(odd), .recent-works-list.items-4 > li:nth-child(even), .recent-works-list.items-3 > li:nth-child(odd), .recent-works-list.items-3 > li:nth-child(even), .recent-works-list.items-2 > li:nth-child(odd), .recent-works-list.items-2 > li:nth-child(even) {
+    width: 50%;
+    height: 360px; }
 
   .recent-work-overlay {
     padding: 25px 15px 25px !important; }
@@ -2208,8 +2222,8 @@ textarea:-moz-placeholder {
     width: 49%; } }
 @media all and (max-width: 767px) {
   .recent-works-list > li {
-    float: none;
-    width: 100%;
+    float: none !important;
+    width: 100% !important;
     height: 380px !important; }
   .recent-works-list .recent-work-overlay {
     padding: 25px 15px 25px;

@@ -7,6 +7,7 @@
     padding: 160px 25px 40px;
     a.btn, .btn {
       margin-top: 32px;
+      margin-right: 15px;
     }
   }
   .swiper-wrapper {
@@ -338,63 +339,88 @@
           left: 50%;
           @include transform();
         }
-        &:nth-child(1) {
+        &:nth-child(6n+1) {
           width: 63.125%;
         }
-        &:nth-child(4) {
+        &:nth-child(6n+4) {
           float: right;
           width: 63.125%;
         }
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(5),
-        &:nth-child(6) {
+        &:nth-child(6n+2),
+        &:nth-child(6n+3),
+        &:nth-child(6n+5),
+        &:nth-child(6n) {
           width: 36.875%;
           height: 320px;
           .recent-work-overlay {
             padding: 25px 30px 25px;
           }
-
         }
       }
     }
     &.items-5 {
       > li {
-        &:nth-child(4){
-          float: left;
-          width: 36.875%;
-        }
-        &:nth-child(5){
+        &:nth-child(5n+1) {
           width: 63.125%;
           height: 640px;
+        }
+        &:nth-child(5n+2),
+        &:nth-child(5n+3) {
+          width: 36.875%;
+          height: 320px;
+          .recent-work-overlay {
+            padding: 25px 30px 25px;
+          }
+        }
+        &:nth-child(5n+4){
+          width: 36.875%;
+          height: 560px;
+        }
+        &:nth-child(5n){
+          width: 63.125%;
+          height: 560px;
         }
       }
     }
     &.items-4 {
       > li {
-        &:nth-child(4) {
-          width: 100%;
+        height: 640px;
+        &:nth-child(4n+2),
+        &:nth-child(4n+3) {
+          width: 36.875%;
+        }
+        &:nth-child(4n+1),
+        &:nth-child(4n) {
+          width: 63.125%;
         }
       }
     }
     &.items-3 {
       > li {
+        &:nth-child(3n+1) {
+          width: 63.125%;
+          height: 640px;
+        }
+        &:nth-child(3n+2),
+        &:nth-child(3n) {
+          width: 36.875%;
+          height: 320px;
+          .recent-work-overlay {
+            padding: 25px 30px 25px;
+          }
+        }
       }
     }
     &.items-2 {
       > li {
-        &:nth-child(1),
-        &:nth-child(2) {
-          height: 640px;
-          width: 50%;
-        }
+        height: 640px;
+        width: 50%;
       }
     }
     &.items-1 {
       > li {
-        &:nth-child(1) {
-          width: 100%;
-        }
+        float: none;
+        width: 100%;
       }
     }
   }

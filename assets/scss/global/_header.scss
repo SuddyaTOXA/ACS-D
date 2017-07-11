@@ -53,6 +53,16 @@
   padding-bottom: 15px;
   @include transition($transition-other);
   a {
+    text-decoration: none;
+    color: $white;
+    font-size: 20px;
+    line-height: 1;
+    span {
+      &:not(:only-child) {
+        font-size: 0;
+        display: none;
+      }
+    }
     &:focus img {
       outline: auto;
     }
@@ -63,7 +73,6 @@
     height: auto;
   }
 }
-
 
 .mobile-menu-wrap,
 .mobile-menu-toggle {
