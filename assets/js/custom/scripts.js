@@ -17,7 +17,7 @@ jQuery(function($){
 
     //header background on scroll
     $(function() {
-        $(window).on('scroll', function () {
+        $(window).on('load scroll', function () {
             var st2 = $(this).scrollTop();
 
             if (st2 > 0) {
@@ -52,23 +52,25 @@ jQuery(function($){
         });
 
         /*! Fades out the whole page when clicking links */
-        $('a:not([target="_blank"])').click(function(e) {
+        $('a:not([target="_blank"]):not([href^="tel"]):not([href^="mailto"]):not("#fancybox-close")').click(function(e) {
             e.preventDefault();
 
-            var hash = $(this).attr('href'),
-                newLocation = this.href;
+            if ( !$(this).hasClass('fancybox') && !$(this).hasClass('popup') ) {
+                var hash = $(this).attr('href'),
+                    newLocation = this.href;
 
-            console.log(hash);
-            console.log(newLocation);
+                console.log(hash);
+                console.log(newLocation);
 
-            if (hash != '#' || !(hash)) {
-                header.removeClass('show');
-                setTimeout(function(){
-                    body.removeClass('show');
-                },400);
-                setTimeout(function(){
-                    window.location = newLocation;
-                },800);
+                if (hash != '#' || !(hash)) {
+                    header.removeClass('show');
+                    setTimeout(function(){
+                        body.removeClass('show');
+                    },400);
+                    setTimeout(function(){
+                        window.location = newLocation;
+                    },800);
+                }
             }
         });
     });

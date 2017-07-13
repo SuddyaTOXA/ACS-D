@@ -143,6 +143,10 @@ img {
   -o-user-select: none;
   user-select: none; }
 
+a[href^="tel"] {
+  text-decoration: none;
+  cursor: default; }
+
 .container {
   max-width: 1220px;
   width: 100%;
@@ -511,6 +515,23 @@ textarea:-moz-placeholder {
   -ms-transition: 0.35s;
   -o-transition: 0.35s;
   transition: 0.35s; }
+
+span.wpcf7-not-valid-tip {
+  text-align: left;
+  font-size: 0.95em; }
+
+.form-box span.wpcf7-not-valid-tip {
+  margin-bottom: -5px; }
+.form-box div.wpcf7-response-output {
+  margin: 30px 0 60px;
+  color: #ffffff; }
+.form-box div.wpcf7-mail-sent-ng {
+  color: #ff0000; }
+.form-box form > p {
+  position: relative; }
+.form-box .ajax-loader {
+  position: absolute;
+  top: 30px; }
 
 .header {
   position: fixed;
@@ -1685,7 +1706,7 @@ textarea:-moz-placeholder {
     margin-bottom: 0; }
   .more-services-icon-list > li a {
     text-decoration: none; }
-    .more-services-icon-list > li a:hover .icon-title, .more-services-icon-list > li a:focus .icon-title {
+    .more-services-icon-list > li a:hover .icon-title, .more-services-icon-list > li a:focus .icon-title, .more-services-icon-list > li a.active .icon-title {
       color: #ffcc00; }
 
 .icon-box {
