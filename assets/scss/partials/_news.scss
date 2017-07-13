@@ -39,7 +39,8 @@
            color: $color-text2;
            text-decoration: none;
            &:hover,
-           &:focus {
+           &:focus,
+           &.active {
               color: $color-text3;
            }
          }
@@ -203,6 +204,9 @@
     margin-bottom: 15px;
     color: $color-text2;
     vertical-align: bottom;
+    &:only-child {
+      display: none;
+    }
   }
 }
 .wp-pagenavi {
@@ -215,7 +219,7 @@
   }
   > * {
     display: inline-block;
-    margin-right: 3px;
+    margin-right: 6px;
     margin-bottom: 10px;
     width: 34px;
     height: 34px;
@@ -226,12 +230,15 @@
     @include border-radius(3px);
     &.extend,
     &.previouspostslink,
-    &.nextpostslink {
+    &.nextpostslink,
+    &.last,
+    &.first {
+      width: 26px;
       box-shadow: none;
       color: #40464b;
     }
     &.extend {
-        width: 45px;
+        width: 40px;
     }
     &.current {
       color: #fff;
@@ -248,8 +255,7 @@
     &:focus {
       color: $color-text3;
     }
-    .fa-angle-left,
-    .fa-angle-right {
+    .fa {
       position: relative;
       top: 2px;
       font-size: 30px;
