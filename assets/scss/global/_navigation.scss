@@ -34,8 +34,11 @@
   }
 }
 .single-news .menu-item-26 > a,
+.post-type-archive-news .menu-item-26 > a,
 .single-case .menu-item-27 > a,
-.single-service .menu-item-28 > a {
+.post-type-archive-case .menu-item-27 > a,
+.single-service .menu-item-28 > a,
+.post-type-archive-service .menu-item-28 > a {
   color: $color-text3;
 }
 

@@ -44,6 +44,9 @@
               color: $color-text3;
            }
          }
+         .active {
+           color: $color-text3;
+         }
          &:last-child {
            margin-bottom: 0;
          }
@@ -247,6 +250,10 @@
     &:last-child {
       margin-right: 0;
     }
+  }
+  .previouspostslink + .page,
+  .page + .nextpostslink {
+    margin-left: 5px;
   }
   a {
     color: $color-text2;
