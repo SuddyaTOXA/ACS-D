@@ -1916,6 +1916,8 @@ span.wpcf7-not-valid-tip {
     width: 50%;
     padding: 0 10px;
     margin-bottom: 14px; }
+    .about-img-list > li:nth-child(odd) {
+      clear: both; }
 
 .about-img-wrap {
   text-align: center; }
@@ -1926,8 +1928,11 @@ span.wpcf7-not-valid-tip {
 .section-pre-project {
   position: relative;
   padding-top: 102px;
-  padding-bottom: 16px; }
-  .section-pre-project:after {
+  padding-bottom: 120px; }
+
+.pre-gradient {
+  position: relative; }
+  .pre-gradient:after {
     position: absolute;
     z-index: 15;
     content: '';
@@ -1942,13 +1947,13 @@ span.wpcf7-not-valid-tip {
     -ms-transform: skew(0deg, 13.4deg);
     -o-transform: skew(0deg, 13.4deg);
     transform: skew(0deg, 13.4deg); }
-  .section-pre-project > * {
+  .pre-gradient > * {
     position: relative;
     z-index: 20; }
 
 .section-project {
   position: relative;
-  padding-top: 35px;
+  padding-top: 110px;
   padding-bottom: 140px; }
   .section-project:after {
     position: absolute;
@@ -2018,6 +2023,11 @@ span.wpcf7-not-valid-tip {
     .prev-next-box a:hover, .prev-next-box a:focus {
       color: #ffcc00; }
 
+.section-full-img .content img, .section-full-img.project .content img {
+  margin-bottom: 0; }
+  .section-full-img .content img + img, .section-full-img.project .content img + img {
+    margin-top: 0; }
+
 .section-full-text {
   padding-top: 102px;
   padding-bottom: 120px;
@@ -2029,6 +2039,9 @@ span.wpcf7-not-valid-tip {
     clear: both; }
     .section-full-text.project .content img.aligncenter {
       width: auto; }
+
+.white-padding + .white-padding {
+  padding-top: 0; }
 
 /*--------------------------------------MEDIA-----------------------------------------*/
 @media all and (max-width: 1400px) {
@@ -2354,15 +2367,18 @@ span.wpcf7-not-valid-tip {
     padding-bottom: 90px; }
 
   .section-pre-project {
-    padding-top: 60px; }
-    .section-pre-project:after {
-      height: 200px;
-      bottom: -100px; }
+    padding-top: 60px;
+    padding-bottom: 70px; }
+
+  .pre-gradient:after {
+    height: 200px;
+    bottom: -100px; }
 
   .section-about .about-link a {
     font-size: 1.125em; }
 
   .section-project {
+    padding-top: 60px;
     padding-bottom: 70px; }
 
   .prev-next-box {

@@ -475,6 +475,9 @@
   }
   .section-pre-project{
     padding-top: 60px;
+    padding-bottom: 70px;
+  }
+  .pre-gradient {
     &:after {
       height: 200px;
       bottom: -100px;
@@ -488,6 +491,7 @@
     }
   }
   .section-project {
+    padding-top: 60px;
     padding-bottom: 70px;
   }
   .prev-next-box {
