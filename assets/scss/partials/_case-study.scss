@@ -115,10 +115,51 @@
       .about-img-wrap {
         text-align: center;
         img {
+          width: 100%;
           max-width: 100%;
           height: auto;
         }
       }
+
+.browser-header + img {
+  &,
+  .about-img-wrap & {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    -webkit-border-bottom-right-radius: 4px;
+    -webkit-border-bottom-left-radius: 4px;
+    -webkit-box-shadow: 1px 2px 5px 1px rgba(0,0,0,0.07);
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.07);
+  }
+}
+.browser-header {
+    background: #d9d7d8;
+    height: 30px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -webkit-border-top-left-radius: 8px;
+    border-bottom: solid 1px #d2d2d2;
+    position: relative;
+    z-index: 4;
+    text-align: left;
+    span {
+      width: 8px;
+      height: 8px;
+      display: inline-block;
+      background-color: #fcfcfc;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      margin-right: 6px;
+      &:first-child {
+        margin-left: 13px;
+      }
+    }
+}
+
 .section-pre-project {
   position: relative;
   padding-top: 102px;
@@ -172,7 +213,7 @@
 }
 .project {
   .content {
-    * {
+    *:not(.browser-header):not(.dot) {
       max-width: 780px;
       width: 100%;
       margin: 0 auto 32px;
@@ -265,4 +306,43 @@
 
 .white-padding + .white-padding {
   padding-top: 0;
+}
+
+.section-shadow {
+  .content,
+  .about-img-list {
+    background-color: #e0e0e0;
+    @include css3-prefix('box-shadow', '0 0 0 120px #e0e0e0');
+    @media all and (max-width: 1219px){
+      @include css3-prefix('box-shadow', '0 0 0 60px #e0e0e0');
+    }
+    @media all and (max-width: 991px){
+      @include css3-prefix('box-shadow', '0 0 0 30px #e0e0e0');
+    }
+    @media all and (max-width: 767px){
+      @include css3-prefix('box-shadow', '0 0 0 0 #e0e0e0');
+    }
+  }
+  .about-img-list {
+    > li {
+      background-color: #e0e0e0;
+      &:last-child,
+      &:nth-last-child(2) {
+        margin-bottom: -6px;
+      }
+    }
+  }
+  &.section-about-img,
+  &.section-full-text {
+    padding: 210px 130px;
+    @media all and (max-width: 1219px){
+      padding: 140px 70px;
+    }
+    @media all and (max-width: 991px){
+      padding: 110px 40px;
+    }
+    @media all and (max-width: 767px){
+      padding: 80px 0;
+    }
+  }
 }

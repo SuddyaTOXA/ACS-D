@@ -55,12 +55,12 @@ jQuery(function($){
         $('a:not([target="_blank"]):not([href^="tel"]):not([href^="mailto"]):not("#fancybox-close")').click(function(e) {
             e.preventDefault();
 
-            if ( !$(this).hasClass('fancybox') && !$(this).hasClass('popup') ) {
+            if ( !$(this).hasClass('fancybox') && !$(this).hasClass('popup') ) { 
                 var hash = $(this).attr('href'),
                     newLocation = this.href;
 
-                console.log(hash);
-                console.log(newLocation);
+                // console.log(hash);
+                // console.log(newLocation);
 
                 if (hash != '#' || !(hash)) {
                     header.removeClass('show');
